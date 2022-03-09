@@ -100,10 +100,54 @@ The SARK Finance app allows users to consolidate their investments into one port
 ### Networking
 * Login
     * (Post) Login to application
+  <code>
+        let username = usernameField.text!
+        let password = passwordField.text!
+        
+        PFUser.logInWithUsername(inBackground: username, password: password)
+        {
+            (user, error) in
+            if user != nil {
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            } else {
+                print("Error: \(String(describing: error?.localizedDescription))")
+                }
+            }
+        }
+  </code>
+
 *	Sign Up
     *	(create/post) Create user
+
+  <code>
+        let user = PFUser()
+        
+        user.username = usernameField.text
+        user.password = passwordField.text
+        
+        user.signUpInBackground{(success, error) in
+            if success {
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            } else {
+                print("Error: \(String(describing: error?.localizedDescription))")
+            }
+        }
+  </code>
+
 *	Main investment screen
     * (read/get) query investment objects based on logged in user.
+    <code>
+    let query = PFQuery(className: "Investments")
+        query.whereKey("author", equalTo: currentUser)
+        query.findObjectsInBackground{
+         (stocks, error) in
+            if stocks != nil {
+                self.stocks = stocks!
+                self.tableView.reloadData()
+            }
+        }
+    }
+  </code>
     *	(read/get) query api based on investment object to obtain company logo and current price
     *	(create/post) create a new investment to add to the portfolio
     *	(update/put) Update specific investment option information
