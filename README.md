@@ -99,9 +99,9 @@ The SARK Finance app allows users to consolidate their investments into one port
 [Add table of models]
 ### Networking
 * Login
-  * (Post) Login to application
+    * (Post) Login to application
 *	Sign Up
-  *	(create/post) Create user
+    *	(create/post) Create user
 *	Main investment screen
   * (read/get) query investment objects based on logged in user.
   *	(read/get) query api based on investment object to obtain company logo and current price
