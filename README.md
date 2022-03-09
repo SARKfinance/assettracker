@@ -62,7 +62,8 @@ The SARK Finance app allows users to consolidate their investments into one port
 
 **Tab Navigation** (Tab to Screen)
 
-* Login/Signup
+* Login
+* Sign up
 * Main investment/home screen
 * Company info screen
 * Trends screen
@@ -70,7 +71,10 @@ The SARK Finance app allows users to consolidate their investments into one port
 
 **Flow Navigation** (Screen to Screen)
 
-* Login/Signup
+* Login
+   * Home
+   * Sign up
+* Sign up
    * Home
 * Main investment screen
    * Company info (tap on the individual investment to see more information)
