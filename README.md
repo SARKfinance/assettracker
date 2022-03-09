@@ -43,9 +43,11 @@ The SARK Finance app allows users to consolidate their investments into one port
 
 ### 2. Screen Archetypes
 
-* Login/Sign up
-   * User can sign up for a new account
+* Login
+   * User can press a button to sign up for a new account
    * User can log in
+* Sign Up
+   * User can sign up for a new account
 * Main investment screen
    * User can add individual investment
    * User can delete individual investment
