@@ -100,7 +100,7 @@ The SARK Finance app allows users to consolidate their investments into one port
 ### Networking
 * Login
     * (Post) Login to application
-  <code>
+        <code>
         let username = usernameField.text!
         let password = passwordField.text!
         
@@ -114,12 +114,12 @@ The SARK Finance app allows users to consolidate their investments into one port
                 }
             }
         }
-  </code>
+        </code>
 
 *	Sign Up
     *	(create/post) Create user
 
-  <code>
+        <code>
         let user = PFUser()
         
         user.username = usernameField.text
@@ -132,10 +132,11 @@ The SARK Finance app allows users to consolidate their investments into one port
                 print("Error: \(String(describing: error?.localizedDescription))")
             }
         }
-  </code>
+        </code>
 
 *	Main investment screen
     * (read/get) query investment objects based on logged in user.
+    
     <code>
     let query = PFQuery(className: "Investments")
         query.whereKey("author", equalTo: currentUser)
@@ -148,14 +149,15 @@ The SARK Finance app allows users to consolidate their investments into one port
         }
     }
   </code>
+  
     *	(read/get) query api based on investment object to obtain company logo and current price
     *	(create/post) create a new investment to add to the portfolio
     *	(update/put) Update specific investment option information
     *	(delete) delete investment from the portfolio
-*	Trends screen
-    *	(read/get) query for current investment values (price over time)
+
 *	Company info screen
     *	(read/get) query for company information
+    *	(read/get) query for current investment values (price over time)
 *	Watchlist screen
     *	(create/post) add investment to watchlist.
 ![image](https://user-images.githubusercontent.com/71610664/157367230-735a2e36-7450-496c-a04f-6348c78ce7e3.png)
