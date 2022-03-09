@@ -173,8 +173,8 @@ The SARK Finance app allows users to consolidate their investments into one port
 
 *	Company info screen
     *	(read/get) query for company information
-    *	(read/get) query for current investment values (price over time)
 *	Watchlist screen
     *	(create/post) add investment to watchlist.
+    *	(delete) delete investment
 ![image](https://user-images.githubusercontent.com/71610664/157367230-735a2e36-7450-496c-a04f-6348c78ce7e3.png)
 
