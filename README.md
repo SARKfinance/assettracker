@@ -102,18 +102,19 @@ The SARK Finance app allows users to consolidate their investments into one port
     * (Post) Login to application
     
 <code>
-let username = usernameField.text!
-let password = passwordField.text!
-        
-PFUser.logInWithUsername(inBackground: username, password: password)
-  {
-  (user, error) in
-  if user != nil {
-    self.performSegue(withIdentifier: "loginSegue", sender: nil)
-  } else {
-    print("Error: \(String(describing: error?.localizedDescription))")
+  let username = usernameField.text!
+
+  let password = passwordField.text!
+
+  PFUser.logInWithUsername(inBackground: username, password: password)
+    {
+    (user, error) in
+    if user != nil {
+      self.performSegue(withIdentifier: "loginSegue", sender: nil)
+    } else {
+      print("Error: \(String(describing: error?.localizedDescription))")
+    }
   }
-}
 </code>
 
 *	Sign Up
@@ -149,9 +150,24 @@ PFUser.logInWithUsername(inBackground: username, password: password)
         }
     }
   </code>
-  
-    *	(read/get) query api based on investment object to obtain company logo and current price
     *	(create/post) create a new investment to add to the portfolio
+
+  <code>
+    let investment  = PFObject(className: "Investment")
+    investment["name"] = investmentNameField.text!
+    investment["price"] = investmentPriceField.text!
+    investment["purchase_date"] = investmentDate.text!
+  
+  investment.saveInBackground {
+    (success, error) in 
+    if success {
+      self.dismiss(animated: true, completion:nil)
+    } else {
+      print("error!")
+    }
+  }
+  </code>
+  
     *	(update/put) Update specific investment option information
     *	(delete) delete investment from the portfolio
 
