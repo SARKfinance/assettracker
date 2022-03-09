@@ -103,16 +103,16 @@ The SARK Finance app allows users to consolidate their investments into one port
 *	Sign Up
     *	(create/post) Create user
 *	Main investment screen
-  * (read/get) query investment objects based on logged in user.
-  *	(read/get) query api based on investment object to obtain company logo and current price
-  *	(create/post) create a new investment to add to the portfolio
-  *	(update/put) Update specific investment option information
-  *	(delete) delete investment from the portfolio
+    * (read/get) query investment objects based on logged in user.
+    *	(read/get) query api based on investment object to obtain company logo and current price
+    *	(create/post) create a new investment to add to the portfolio
+    *	(update/put) Update specific investment option information
+    *	(delete) delete investment from the portfolio
 *	Trends screen
-  *	(read/get) query for current investment values (price over time)
+    *	(read/get) query for current investment values (price over time)
 *	Company info screen
-  *	(read/get) query for company information
+    *	(read/get) query for company information
 *	Watchlist screen
-  *	(create/post) add investment to watchlist.
+    *	(create/post) add investment to watchlist.
 ![image](https://user-images.githubusercontent.com/71610664/157367230-735a2e36-7450-496c-a04f-6348c78ce7e3.png)
 
