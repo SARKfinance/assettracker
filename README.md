@@ -110,7 +110,7 @@ The SARK Finance app allows users to consolidate their investments into one port
 * Login
     * (Post) Login to application
 
-      ```
+      ```swift
         let username = usernameField.text!
         let password = passwordField.text!
   
@@ -146,7 +146,8 @@ The SARK Finance app allows users to consolidate their investments into one port
 
 *	Main investment screen
     * (read/get) query investment objects based on logged in user.
-      ```
+    * 
+      ```swift
       let query = PFQuery(className: "Investments")
           query.whereKey("author", equalTo: currentUser)
           query.findObjectsInBackground{
@@ -160,7 +161,7 @@ The SARK Finance app allows users to consolidate their investments into one port
       ```
     *	(create/post) create a new investment to add to the portfolio
 
-        ```
+        ```swift
           let investment  = PFObject(className: "Investment")
           investment["name"] = investmentNameField.text!
           investment["price"] = investmentPriceField.text!
