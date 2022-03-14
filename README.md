@@ -83,11 +83,10 @@ The SARK Finance app allows users to consolidate their investments into one port
     * Main investment screen (swipe from left or possibly tab bar at bottom
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="https://github.com/SARKfinance/assettracker/blob/main/Login%20Screen.png" height=350>
-<img src="https://github.com/SARKfinance/assettracker/blob/main/Sign%20up%20screen.png" height=350>
-<img src="https://github.com/SARKfinance/assettracker/blob/main/Main%20Screen%20and%20Watchlist.png" height=350>
-<img src="https://github.com/SARKfinance/assettracker/blob/main/Company%20Details%20Screen.png" height=350>
+<img src="https://github.com/SARKfinance/assettracker/blob/main/Login%20Screen.png" height=400>
+<img src="https://github.com/SARKfinance/assettracker/blob/main/Sign%20up%20screen.png" height=400>
+<img src="https://github.com/SARKfinance/assettracker/blob/main/Main%20Screen%20and%20Watchlist.png" height=400>
+<img src="https://github.com/SARKfinance/assettracker/blob/main/Company%20Details%20Screen.png" height=400>
 
 ### [BONUS] Digital Wireframes & Mockups
 
