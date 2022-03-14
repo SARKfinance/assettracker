@@ -51,8 +51,6 @@ The SARK Finance app allows users to consolidate their investments into one port
 * Main investment screen
    * User can add individual investment
    * User can delete individual investment
-* Trends screen
-    * User can see daily changes/trends in their investment value
 * Company info screen
     * User can see more information about the company
 * Watchlist screen
@@ -66,7 +64,6 @@ The SARK Finance app allows users to consolidate their investments into one port
 * Sign up
 * Main investment/home screen
 * Company info screen
-* Trends screen
 * Watchlist screen
 
 **Flow Navigation** (Screen to Screen)
@@ -78,12 +75,12 @@ The SARK Finance app allows users to consolidate their investments into one port
    * Home
 * Main investment screen
    * Company info (tap on the individual investment to see more information)
-* Trends screen
-    * None
+   * Watchlist screen (swipe from right or possibly tab bar at bottom)
 * Company info screen
     * Back button to main investment screen or watchlist screen
 * Watchlist screen
     * Company info (tap on the individual investment to see more information)
+    * Main investment screen (swipe from left or possibly tab bar at bottom
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
