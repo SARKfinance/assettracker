@@ -146,37 +146,36 @@ The SARK Finance app allows users to consolidate their investments into one port
 
 *	Main investment screen
     * (read/get) query investment objects based on logged in user.
-    
-    <code>
-    let query = PFQuery(className: "Investments")
-        query.whereKey("author", equalTo: currentUser)
-        query.findObjectsInBackground{
-         (stocks, error) in
-            if stocks != nil {
-                self.stocks = stocks!
-                self.tableView.reloadData()
+      <code>
+      let query = PFQuery(className: "Investments")
+          query.whereKey("author", equalTo: currentUser)
+          query.findObjectsInBackground{
+           (stocks, error) in
+              if stocks != nil {
+                  self.stocks = stocks!
+                  self.tableView.reloadData()
+                }
             }
         }
-    }
-  </code>
+      </code>
     *	(create/post) create a new investment to add to the portfolio
 
-  <code>
-    let investment  = PFObject(className: "Investment")
-    investment["name"] = investmentNameField.text!
-    investment["price"] = investmentPriceField.text!
-    investment["purchase_date"] = investmentDate.text!
-    investment["brokerage"] = investmentBrokerageField.text!
-  
-  investment.saveInBackground {
-    (success, error) in 
-    if success {
-      self.dismiss(animated: true, completion:nil)
-    } else {
-      print("error!")
-    }
-  }
-  </code>
+        <code>
+          let investment  = PFObject(className: "Investment")
+          investment["name"] = investmentNameField.text!
+          investment["price"] = investmentPriceField.text!
+          investment["purchase_date"] = investmentDate.text!
+          investment["brokerage"] = investmentBrokerageField.text!
+
+        investment.saveInBackground {
+          (success, error) in 
+          if success {
+            self.dismiss(animated: true, completion:nil)
+          } else {
+            print("error!")
+          }
+        }
+        </code>
   
     *	(update/put) Update specific investment option information
     *	(delete) delete investment from the portfolio
