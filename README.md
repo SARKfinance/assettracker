@@ -111,7 +111,7 @@ The SARK Finance app allows users to consolidate their investments into one port
     * (Post) Login to application
 
       <code>
-      ```
+
         let username = usernameField.text!
   
         let password = passwordField.text!
@@ -125,7 +125,7 @@ The SARK Finance app allows users to consolidate their investments into one port
             print("Error: \(String(describing: error?.localizedDescription))")
           }
         }
-      ```
+
       </code>
 
 *	Sign Up
