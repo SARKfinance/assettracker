@@ -95,7 +95,16 @@ The SARK Finance app allows users to consolidate their investments into one port
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+   Investment
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the investment(default field) |
+   | author        | Pointer to User| the owner of the investment |
+   | name       | String   | the ticker for that stock |
+   | price | Number   | the price at which the user bought the investment |
+   | boughtAt     | DateTime | the date the user bought the investment |
+   | brokerage     | String | the brokerage the user's investment is held at |
+   
 ### Networking
 * Login
     * (Post) Login to application
@@ -156,6 +165,7 @@ The SARK Finance app allows users to consolidate their investments into one port
     investment["name"] = investmentNameField.text!
     investment["price"] = investmentPriceField.text!
     investment["purchase_date"] = investmentDate.text!
+    investment["brokerage"] = investmentBrokerageField.text!
   
   investment.saveInBackground {
     (success, error) in 
