@@ -129,7 +129,7 @@ The SARK Finance app allows users to consolidate their investments into one port
 *	Sign Up
     *	(create/post) Create user
 
-        ```
+        ```swift
           let user = PFUser()
   
           user.username = usernameField.text
