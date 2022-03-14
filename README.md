@@ -113,6 +113,7 @@ The SARK Finance app allows users to consolidate their investments into one port
       <code>
         let username = usernameField.text!
         let password = passwordField.text!
+  
         PFUser.logInWithUsername(inBackground: username, password: password)
           {
           (user, error) in
@@ -128,16 +129,17 @@ The SARK Finance app allows users to consolidate their investments into one port
     *	(create/post) Create user
 
         <code>
-        let user = PFUser()
-        user.username = usernameField.text
-        user.password = passwordField.text
-        user.signUpInBackground{(success, error) in
-            if success {
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
-            } else {
-                print("Error: \(String(describing: error?.localizedDescription))")
-            }
-        }
+          let user = PFUser()
+          user.username = usernameField.text
+          user.password = passwordField.text
+
+          user.signUpInBackground{(success, error) in
+              if success {
+                  self.performSegue(withIdentifier: "loginSegue", sender: nil)
+              } else {
+                  print("Error: \(String(describing: error?.localizedDescription))")
+              }
+          }
         </code>
 
 *	Main investment screen
