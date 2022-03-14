@@ -85,6 +85,7 @@ The SARK Finance app allows users to consolidate their investments into one port
 ## Wireframes
 
 ### [BONUS] Digital Wireframes & Mockups
+Prototype Flow: <img src="https://www.figma.com/proto/ETcngAde8rsRreObIqdSQV/Wireframing-Prototype?node-id=3%3A13&scaling=scale-down&page-id=0%3A1&starting-point-node-id=3%3A13" height=350> Figma Bonus High Fidelity Digital Wireframes and Interactive Prototype
 <p float="left">
   <img src="https://github.com/SARKfinance/assettracker/blob/main/Login%20Screen.png" height=350>
   <img src="https://github.com/SARKfinance/assettracker/blob/main/Sign%20up%20screen.png" height=350>
