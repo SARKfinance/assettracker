@@ -6,6 +6,8 @@ target 'Sark Finance' do
   use_frameworks!
 
   # Pods for Sark Finance
+  pod 'Parse'
+  pod 'AlamofireImage'
 
   target 'Sark FinanceTests' do
     inherit! :search_paths
