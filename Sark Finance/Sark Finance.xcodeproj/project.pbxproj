@@ -1,0 +1,728 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A308874028C709CCCAA29C1 /* Pods_Sark_Finance_Sark_FinanceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1129DBB28F4B8C6A1D3A68C /* Pods_Sark_Finance_Sark_FinanceUITests.framework */; };
+		71F7619D5C6B07A4677FE461 /* Pods_Sark_Finance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047DB324839C828C61A4678B /* Pods_Sark_Finance.framework */; };
+		B20F373C9E160F4210D3BB66 /* Pods_Sark_FinanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D05B7EF8B5CDA6B8019E255 /* Pods_Sark_FinanceTests.framework */; };
+		EC65241827E17D9F0072DD3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65241727E17D9F0072DD3B /* AppDelegate.swift */; };
+		EC65241A27E17D9F0072DD3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65241927E17D9F0072DD3B /* SceneDelegate.swift */; };
+		EC65241C27E17D9F0072DD3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65241B27E17D9F0072DD3B /* ViewController.swift */; };
+		EC65241F27E17D9F0072DD3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC65241D27E17D9F0072DD3B /* Main.storyboard */; };
+		EC65242127E17DA10072DD3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC65242027E17DA10072DD3B /* Assets.xcassets */; };
+		EC65242427E17DA10072DD3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC65242227E17DA10072DD3B /* LaunchScreen.storyboard */; };
+		EC65242F27E17DA20072DD3B /* Sark_FinanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65242E27E17DA20072DD3B /* Sark_FinanceTests.swift */; };
+		EC65243927E17DA20072DD3B /* Sark_FinanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65243827E17DA20072DD3B /* Sark_FinanceUITests.swift */; };
+		EC65243B27E17DA20072DD3B /* Sark_FinanceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65243A27E17DA20072DD3B /* Sark_FinanceUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC65242B27E17DA20072DD3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC65240C27E17D9F0072DD3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC65241327E17D9F0072DD3B;
+			remoteInfo = "Sark Finance";
+		};
+		EC65243527E17DA20072DD3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC65240C27E17D9F0072DD3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC65241327E17D9F0072DD3B;
+			remoteInfo = "Sark Finance";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		047DB324839C828C61A4678B /* Pods_Sark_Finance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sark_Finance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E983D3129254452B9C618A5 /* Pods-Sark Finance-Sark FinanceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sark Finance-Sark FinanceUITests.release.xcconfig"; path = "Target Support Files/Pods-Sark Finance-Sark FinanceUITests/Pods-Sark Finance-Sark FinanceUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3DC5E95ECD1E5512CBD6CC07 /* Pods-Sark Finance-Sark FinanceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sark Finance-Sark FinanceUITests.debug.xcconfig"; path = "Target Support Files/Pods-Sark Finance-Sark FinanceUITests/Pods-Sark Finance-Sark FinanceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5C8E5F15D63747AD69AB096E /* Pods-Sark Finance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sark Finance.debug.xcconfig"; path = "Target Support Files/Pods-Sark Finance/Pods-Sark Finance.debug.xcconfig"; sourceTree = "<group>"; };
+		6D05B7EF8B5CDA6B8019E255 /* Pods_Sark_FinanceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sark_FinanceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CDD25BA16592DA4F9504C7D /* Pods-Sark FinanceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sark FinanceTests.release.xcconfig"; path = "Target Support Files/Pods-Sark FinanceTests/Pods-Sark FinanceTests.release.xcconfig"; sourceTree = "<group>"; };
+		D1129DBB28F4B8C6A1D3A68C /* Pods_Sark_Finance_Sark_FinanceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sark_Finance_Sark_FinanceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E34FDD21411F6AC907ED06A3 /* Pods-Sark FinanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sark FinanceTests.debug.xcconfig"; path = "Target Support Files/Pods-Sark FinanceTests/Pods-Sark FinanceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EB912908DBE488985F4EC20A /* Pods-Sark Finance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sark Finance.release.xcconfig"; path = "Target Support Files/Pods-Sark Finance/Pods-Sark Finance.release.xcconfig"; sourceTree = "<group>"; };
+		EC65241427E17D9F0072DD3B /* Sark Finance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sark Finance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC65241727E17D9F0072DD3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC65241927E17D9F0072DD3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EC65241B27E17D9F0072DD3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC65241E27E17D9F0072DD3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC65242027E17DA10072DD3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC65242327E17DA10072DD3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC65242527E17DA10072DD3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC65242A27E17DA20072DD3B /* Sark FinanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sark FinanceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC65242E27E17DA20072DD3B /* Sark_FinanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sark_FinanceTests.swift; sourceTree = "<group>"; };
+		EC65243427E17DA20072DD3B /* Sark FinanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sark FinanceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC65243827E17DA20072DD3B /* Sark_FinanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sark_FinanceUITests.swift; sourceTree = "<group>"; };
+		EC65243A27E17DA20072DD3B /* Sark_FinanceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sark_FinanceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC65241127E17D9F0072DD3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71F7619D5C6B07A4677FE461 /* Pods_Sark_Finance.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC65242727E17DA20072DD3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B20F373C9E160F4210D3BB66 /* Pods_Sark_FinanceTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC65243127E17DA20072DD3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A308874028C709CCCAA29C1 /* Pods_Sark_Finance_Sark_FinanceUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		62D5358999579146663238FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C8E5F15D63747AD69AB096E /* Pods-Sark Finance.debug.xcconfig */,
+				EB912908DBE488985F4EC20A /* Pods-Sark Finance.release.xcconfig */,
+				3DC5E95ECD1E5512CBD6CC07 /* Pods-Sark Finance-Sark FinanceUITests.debug.xcconfig */,
+				0E983D3129254452B9C618A5 /* Pods-Sark Finance-Sark FinanceUITests.release.xcconfig */,
+				E34FDD21411F6AC907ED06A3 /* Pods-Sark FinanceTests.debug.xcconfig */,
+				9CDD25BA16592DA4F9504C7D /* Pods-Sark FinanceTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		652FB181DA36A0A1D6FA9B88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				047DB324839C828C61A4678B /* Pods_Sark_Finance.framework */,
+				D1129DBB28F4B8C6A1D3A68C /* Pods_Sark_Finance_Sark_FinanceUITests.framework */,
+				6D05B7EF8B5CDA6B8019E255 /* Pods_Sark_FinanceTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC65240B27E17D9F0072DD3B = {
+			isa = PBXGroup;
+			children = (
+				EC65241627E17D9F0072DD3B /* Sark Finance */,
+				EC65242D27E17DA20072DD3B /* Sark FinanceTests */,
+				EC65243727E17DA20072DD3B /* Sark FinanceUITests */,
+				EC65241527E17D9F0072DD3B /* Products */,
+				62D5358999579146663238FE /* Pods */,
+				652FB181DA36A0A1D6FA9B88 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EC65241527E17D9F0072DD3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC65241427E17D9F0072DD3B /* Sark Finance.app */,
+				EC65242A27E17DA20072DD3B /* Sark FinanceTests.xctest */,
+				EC65243427E17DA20072DD3B /* Sark FinanceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC65241627E17D9F0072DD3B /* Sark Finance */ = {
+			isa = PBXGroup;
+			children = (
+				EC65241727E17D9F0072DD3B /* AppDelegate.swift */,
+				EC65241927E17D9F0072DD3B /* SceneDelegate.swift */,
+				EC65241B27E17D9F0072DD3B /* ViewController.swift */,
+				EC65241D27E17D9F0072DD3B /* Main.storyboard */,
+				EC65242027E17DA10072DD3B /* Assets.xcassets */,
+				EC65242227E17DA10072DD3B /* LaunchScreen.storyboard */,
+				EC65242527E17DA10072DD3B /* Info.plist */,
+			);
+			path = "Sark Finance";
+			sourceTree = "<group>";
+		};
+		EC65242D27E17DA20072DD3B /* Sark FinanceTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC65242E27E17DA20072DD3B /* Sark_FinanceTests.swift */,
+			);
+			path = "Sark FinanceTests";
+			sourceTree = "<group>";
+		};
+		EC65243727E17DA20072DD3B /* Sark FinanceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC65243827E17DA20072DD3B /* Sark_FinanceUITests.swift */,
+				EC65243A27E17DA20072DD3B /* Sark_FinanceUITestsLaunchTests.swift */,
+			);
+			path = "Sark FinanceUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC65241327E17D9F0072DD3B /* Sark Finance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC65243E27E17DA20072DD3B /* Build configuration list for PBXNativeTarget "Sark Finance" */;
+			buildPhases = (
+				CECE7DFD6D8424FA4CA5B596 /* [CP] Check Pods Manifest.lock */,
+				EC65241027E17D9F0072DD3B /* Sources */,
+				EC65241127E17D9F0072DD3B /* Frameworks */,
+				EC65241227E17D9F0072DD3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sark Finance";
+			productName = "Sark Finance";
+			productReference = EC65241427E17D9F0072DD3B /* Sark Finance.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC65242927E17DA20072DD3B /* Sark FinanceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC65244127E17DA20072DD3B /* Build configuration list for PBXNativeTarget "Sark FinanceTests" */;
+			buildPhases = (
+				1A487C8B423E167512C8A2C2 /* [CP] Check Pods Manifest.lock */,
+				EC65242627E17DA20072DD3B /* Sources */,
+				EC65242727E17DA20072DD3B /* Frameworks */,
+				EC65242827E17DA20072DD3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC65242C27E17DA20072DD3B /* PBXTargetDependency */,
+			);
+			name = "Sark FinanceTests";
+			productName = "Sark FinanceTests";
+			productReference = EC65242A27E17DA20072DD3B /* Sark FinanceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EC65243327E17DA20072DD3B /* Sark FinanceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC65244427E17DA20072DD3B /* Build configuration list for PBXNativeTarget "Sark FinanceUITests" */;
+			buildPhases = (
+				BABC9C9870C7E3F2698576DA /* [CP] Check Pods Manifest.lock */,
+				EC65243027E17DA20072DD3B /* Sources */,
+				EC65243127E17DA20072DD3B /* Frameworks */,
+				EC65243227E17DA20072DD3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC65243627E17DA20072DD3B /* PBXTargetDependency */,
+			);
+			name = "Sark FinanceUITests";
+			productName = "Sark FinanceUITests";
+			productReference = EC65243427E17DA20072DD3B /* Sark FinanceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC65240C27E17D9F0072DD3B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					EC65241327E17D9F0072DD3B = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					EC65242927E17DA20072DD3B = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = EC65241327E17D9F0072DD3B;
+					};
+					EC65243327E17DA20072DD3B = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = EC65241327E17D9F0072DD3B;
+					};
+				};
+			};
+			buildConfigurationList = EC65240F27E17D9F0072DD3B /* Build configuration list for PBXProject "Sark Finance" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC65240B27E17D9F0072DD3B;
+			productRefGroup = EC65241527E17D9F0072DD3B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC65241327E17D9F0072DD3B /* Sark Finance */,
+				EC65242927E17DA20072DD3B /* Sark FinanceTests */,
+				EC65243327E17DA20072DD3B /* Sark FinanceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC65241227E17D9F0072DD3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC65242427E17DA10072DD3B /* LaunchScreen.storyboard in Resources */,
+				EC65242127E17DA10072DD3B /* Assets.xcassets in Resources */,
+				EC65241F27E17D9F0072DD3B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC65242827E17DA20072DD3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC65243227E17DA20072DD3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A487C8B423E167512C8A2C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sark FinanceTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BABC9C9870C7E3F2698576DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sark Finance-Sark FinanceUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CECE7DFD6D8424FA4CA5B596 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sark Finance-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC65241027E17D9F0072DD3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC65241C27E17D9F0072DD3B /* ViewController.swift in Sources */,
+				EC65241827E17D9F0072DD3B /* AppDelegate.swift in Sources */,
+				EC65241A27E17D9F0072DD3B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC65242627E17DA20072DD3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC65242F27E17DA20072DD3B /* Sark_FinanceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC65243027E17DA20072DD3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC65243B27E17DA20072DD3B /* Sark_FinanceUITestsLaunchTests.swift in Sources */,
+				EC65243927E17DA20072DD3B /* Sark_FinanceUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC65242C27E17DA20072DD3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC65241327E17D9F0072DD3B /* Sark Finance */;
+			targetProxy = EC65242B27E17DA20072DD3B /* PBXContainerItemProxy */;
+		};
+		EC65243627E17DA20072DD3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC65241327E17D9F0072DD3B /* Sark Finance */;
+			targetProxy = EC65243527E17DA20072DD3B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC65241D27E17D9F0072DD3B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC65241E27E17D9F0072DD3B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC65242227E17DA10072DD3B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC65242327E17DA10072DD3B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC65243C27E17DA20072DD3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC65243D27E17DA20072DD3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC65243F27E17DA20072DD3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C8E5F15D63747AD69AB096E /* Pods-Sark Finance.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8XBPG6QUQX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sark Finance/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alankuo.Sark-Finance";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC65244027E17DA20072DD3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB912908DBE488985F4EC20A /* Pods-Sark Finance.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8XBPG6QUQX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sark Finance/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alankuo.Sark-Finance";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC65244227E17DA20072DD3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E34FDD21411F6AC907ED06A3 /* Pods-Sark FinanceTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8XBPG6QUQX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alankuo.Sark-FinanceTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sark Finance.app/Sark Finance";
+			};
+			name = Debug;
+		};
+		EC65244327E17DA20072DD3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CDD25BA16592DA4F9504C7D /* Pods-Sark FinanceTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8XBPG6QUQX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alankuo.Sark-FinanceTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sark Finance.app/Sark Finance";
+			};
+			name = Release;
+		};
+		EC65244527E17DA20072DD3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DC5E95ECD1E5512CBD6CC07 /* Pods-Sark Finance-Sark FinanceUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8XBPG6QUQX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alankuo.Sark-FinanceUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Sark Finance";
+			};
+			name = Debug;
+		};
+		EC65244627E17DA20072DD3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E983D3129254452B9C618A5 /* Pods-Sark Finance-Sark FinanceUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8XBPG6QUQX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alankuo.Sark-FinanceUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Sark Finance";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC65240F27E17D9F0072DD3B /* Build configuration list for PBXProject "Sark Finance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC65243C27E17DA20072DD3B /* Debug */,
+				EC65243D27E17DA20072DD3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC65243E27E17DA20072DD3B /* Build configuration list for PBXNativeTarget "Sark Finance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC65243F27E17DA20072DD3B /* Debug */,
+				EC65244027E17DA20072DD3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC65244127E17DA20072DD3B /* Build configuration list for PBXNativeTarget "Sark FinanceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC65244227E17DA20072DD3B /* Debug */,
+				EC65244327E17DA20072DD3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC65244427E17DA20072DD3B /* Build configuration list for PBXNativeTarget "Sark FinanceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC65244527E17DA20072DD3B /* Debug */,
+				EC65244627E17DA20072DD3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC65240C27E17D9F0072DD3B /* Project object */;
+}
