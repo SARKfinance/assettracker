@@ -22,6 +22,16 @@ class SignUpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func onCancel(_ sender: Any) {
+        //testing code
+        print("clicked cancel")
+    }
+    
+    @IBAction func onSignUp(_ sender: Any) {
+        //testing code
+        print("clicked sign up")
+    }
+    
 
     /*
     // MARK: - Navigation
