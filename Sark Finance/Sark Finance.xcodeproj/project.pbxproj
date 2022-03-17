@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A308874028C709CCCAA29C1 /* Pods_Sark_Finance_Sark_FinanceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1129DBB28F4B8C6A1D3A68C /* Pods_Sark_Finance_Sark_FinanceUITests.framework */; };
+		5EB85C7627E397C300A78AB3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB85C7527E397C300A78AB3 /* SignUpViewController.swift */; };
 		71F7619D5C6B07A4677FE461 /* Pods_Sark_Finance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047DB324839C828C61A4678B /* Pods_Sark_Finance.framework */; };
 		93A6143127E1910E00A3D4BD /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A6143027E1910E00A3D4BD /* LoginScreen.storyboard */; };
 		B20F373C9E160F4210D3BB66 /* Pods_Sark_FinanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D05B7EF8B5CDA6B8019E255 /* Pods_Sark_FinanceTests.framework */; };
@@ -44,6 +45,7 @@
 		0E983D3129254452B9C618A5 /* Pods-Sark Finance-Sark FinanceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sark Finance-Sark FinanceUITests.release.xcconfig"; path = "Target Support Files/Pods-Sark Finance-Sark FinanceUITests/Pods-Sark Finance-Sark FinanceUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3DC5E95ECD1E5512CBD6CC07 /* Pods-Sark Finance-Sark FinanceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sark Finance-Sark FinanceUITests.debug.xcconfig"; path = "Target Support Files/Pods-Sark Finance-Sark FinanceUITests/Pods-Sark Finance-Sark FinanceUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C8E5F15D63747AD69AB096E /* Pods-Sark Finance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sark Finance.debug.xcconfig"; path = "Target Support Files/Pods-Sark Finance/Pods-Sark Finance.debug.xcconfig"; sourceTree = "<group>"; };
+		5EB85C7527E397C300A78AB3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6D05B7EF8B5CDA6B8019E255 /* Pods_Sark_FinanceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sark_FinanceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A6143027E1910E00A3D4BD /* LoginScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
 		9CDD25BA16592DA4F9504C7D /* Pods-Sark FinanceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sark FinanceTests.release.xcconfig"; path = "Target Support Files/Pods-Sark FinanceTests/Pods-Sark FinanceTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				EC65242027E17DA10072DD3B /* Assets.xcassets */,
 				EC65242227E17DA10072DD3B /* LaunchScreen.storyboard */,
 				EC65242527E17DA10072DD3B /* Info.plist */,
+				5EB85C7527E397C300A78AB3 /* SignUpViewController.swift */,
 			);
 			path = "Sark Finance";
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 			files = (
 				EC65241C27E17D9F0072DD3B /* ViewController.swift in Sources */,
 				EC65241827E17D9F0072DD3B /* AppDelegate.swift in Sources */,
+				5EB85C7627E397C300A78AB3 /* SignUpViewController.swift in Sources */,
 				EC65241A27E17D9F0072DD3B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

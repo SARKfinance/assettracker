@@ -41,7 +41,7 @@
         <!--SignUpViewController-->
         <scene sceneID="sFw-bm-8bd">
             <objects>
-                <viewController id="qQJ-Ao-Joq" userLabel="SignUpViewController" sceneMemberID="viewController">
+                <viewController id="qQJ-Ao-Joq" userLabel="SignUpViewController" customClass="SignUpViewController" customModule="Sark_Finance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RoG-zm-0Hg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,6 +131,13 @@
                         <viewLayoutGuide key="safeArea" id="9Sk-Ez-s9P"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="ageField" destination="cKL-nV-oYk" id="W5U-7l-W0i"/>
+                        <outlet property="emailField" destination="lFl-Sp-vVT" id="9gB-hs-PTh"/>
+                        <outlet property="nameField" destination="sSm-Ly-xCv" id="sL4-E6-ui8"/>
+                        <outlet property="passwordField" destination="Ana-NL-aEJ" id="RCD-bu-gDP"/>
+                        <outlet property="usernameField" destination="IZU-pY-KcM" id="CaT-Zc-lPl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUF-MC-ES5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
