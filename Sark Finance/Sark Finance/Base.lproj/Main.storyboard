@@ -224,7 +224,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Wu-dM-sPD">
-                                <rect key="frame" x="57" y="622" width="129.5" height="37"/>
+                                <rect key="frame" x="57" y="622" width="103" height="37"/>
                                 <color key="backgroundColor" red="0.87769242270000003" green="0.94809399930000005" blue="1" alpha="0.48984906459999999" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.067765014600000006" green="0.26065922060000002" blue="0.90180009660000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
@@ -266,7 +266,7 @@
                             <constraint firstItem="MZi-Z7-ON6" firstAttribute="trailing" secondItem="XKP-JS-h1A" secondAttribute="trailing" id="cQS-Pk-7mU"/>
                             <constraint firstItem="MZi-Z7-ON6" firstAttribute="trailing" secondItem="WSK-DJ-pYC" secondAttribute="trailing" id="ehV-cr-565"/>
                             <constraint firstItem="7Wu-dM-sPD" firstAttribute="leading" secondItem="ogU-3J-bNI" secondAttribute="leading" constant="57" id="h2D-vS-ha0"/>
-                            <constraint firstItem="WSK-DJ-pYC" firstAttribute="leading" secondItem="7Wu-dM-sPD" secondAttribute="trailing" constant="70" id="lKU-po-ean"/>
+                            <constraint firstItem="WSK-DJ-pYC" firstAttribute="leading" secondItem="7Wu-dM-sPD" secondAttribute="trailing" constant="96.5" id="lKU-po-ean"/>
                             <constraint firstItem="7Wu-dM-sPD" firstAttribute="top" secondItem="XKP-JS-h1A" secondAttribute="bottom" constant="59" id="mV9-lf-fbq"/>
                             <constraint firstItem="MZi-Z7-ON6" firstAttribute="top" secondItem="Cd8-GB-Hz7" secondAttribute="bottom" constant="5" id="oyH-U3-7jv"/>
                             <constraint firstItem="7Wu-dM-sPD" firstAttribute="leading" secondItem="MZi-Z7-ON6" secondAttribute="leading" id="wwa-E5-nVT"/>
