@@ -16,7 +16,7 @@ The SARK Finance app allows users to consolidate their investments into one port
 ### App Evaluation
 [Evaluation of your app across the following attributes]
 - **Category:** Finance
-- **Mobile:** 
+- **Mobile:** iOS
 - **Story:** Allows users to keep track of their stock investments across different brokerages/exchanges
 - **Market:** Any user interested in personal finance
 - **Habit:** User would typically check the app at least once a day to keep track of their investments
