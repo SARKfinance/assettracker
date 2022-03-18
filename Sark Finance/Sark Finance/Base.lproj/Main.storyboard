@@ -323,7 +323,7 @@
         <!--Navigation Controller-->
         <scene sceneID="qtZ-YC-LOM">
             <objects>
-                <navigationController id="QdP-6F-ywb" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="PortfolioNavigationController" id="QdP-6F-ywb" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aYq-19-uHD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
