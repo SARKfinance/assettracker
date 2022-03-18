@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class SignUpViewController: UIViewController {
 
@@ -24,11 +25,28 @@ class SignUpViewController: UIViewController {
     
     @IBAction func onCancel(_ sender: Any) {
         //testing code
+        self.dismiss(animated: true, completion: nil)
         print("clicked cancel")
     }
     
     @IBAction func onSignUp(_ sender: Any) {
         //testing code
+        let user = PFUser();
+        user.username = usernameField.text
+        user.password = passwordField.text
+        user["name"] = nameField.text
+        user["age"] = ageField.text
+        user["email"] = emailField.text
+        
+        user.signUpInBackground { (success, error) in
+            if success {
+                self.performSegue(withIdentifier: "signUpCompleteSegue", sender: nil)
+            }
+            else {
+                print("Error: \(error)")
+            }
+            
+        }
         print("clicked sign up")
     }
     
