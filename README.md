@@ -22,7 +22,6 @@ The SARK Finance app allows users to consolidate their investments into one port
 - **Habit:** User would typically check the app at least once a day to keep track of their investments
 - **Scope:** Start out by focusing on typical investments, possibly could expand to real estate/crypto other areas?
 
-Hello Kevin!
 
 ## Product Spec
 
