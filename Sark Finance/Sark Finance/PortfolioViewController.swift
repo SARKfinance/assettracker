@@ -11,7 +11,7 @@ import Parse
 
 
 class PortfolioViewController: UITableViewController  {
-    var companies = ["AAPL", "MSFT", "DIS", "SBUX", "YELP", "GOOG", "AMZN", "LUV", "UAL"]
+    var companies = ["AAPL", "MSFT", "DIS", "SBUX", "LUV"]
     
     @IBAction func signOut(_ sender: Any) {
         PFUser.logOut()

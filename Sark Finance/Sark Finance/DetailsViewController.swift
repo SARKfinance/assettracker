@@ -36,11 +36,12 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var companyName: UILabel!
     @IBOutlet weak var companyDetails: UILabel!
     @IBOutlet weak var companyLogo: UIImageView!
-    @IBOutlet weak var companyTicker: UILabel!
+    @IBOutlet weak var companySharePrice: UILabel!
     @IBOutlet weak var companyDate: UILabel!
     @IBOutlet weak var companyEmployees: UILabel!
     @IBOutlet weak var companyShares: UILabel!
     @IBOutlet weak var companyMktCap: UILabel!
+    @IBOutlet weak var companyTicker: UILabel!
     
     var details = [String:Any]()
     var branding = [String:Any] ()
@@ -51,7 +52,6 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let url = URL(string:"https://api.polygon.io/v3/reference/tickers/" + self.ticker + "?apiKey=iOuM5gLKJ37tjoCXjIW6elzWLRdbCsZw")!
-        print(url)
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
@@ -68,6 +68,10 @@ class DetailsViewController: UIViewController {
                  self.companyDetails.text = resultsDict?.results.description
                  
                  self.companyTicker.text = resultsDict?.results.ticker_root
+                 
+                 
+                 var sharePrice:Double = ((resultsDict?.results.market_cap)!/Double((resultsDict?.results.share_class_shares_outstanding)!))
+                 self.companySharePrice.text = String(format: "$%.2f", sharePrice)
                  
                  
                  // Format date as Month Day, Year
