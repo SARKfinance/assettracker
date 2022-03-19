@@ -294,13 +294,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="202" id="vo5-6y-ddg">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PortfolioViewCell" rowHeight="202" id="vo5-6y-ddg" customClass="PortfolioViewCell" customModule="Sark_Finance" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="202"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vo5-6y-ddg" id="a8U-6w-03a">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ticker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qh9-tw-lCm">
+                                            <rect key="frame" x="10" y="10" width="394" height="182"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Qh9-tw-lCm" firstAttribute="leading" secondItem="a8U-6w-03a" secondAttribute="leading" constant="10" id="Cbn-WR-Aaq"/>
+                                        <constraint firstItem="Qh9-tw-lCm" firstAttribute="top" secondItem="a8U-6w-03a" secondAttribute="top" constant="10" id="NIj-1w-nx6"/>
+                                        <constraint firstAttribute="bottom" secondItem="Qh9-tw-lCm" secondAttribute="bottom" constant="10" id="s9Z-1F-Efg"/>
+                                        <constraint firstAttribute="trailing" secondItem="Qh9-tw-lCm" secondAttribute="trailing" constant="10" id="xCb-M5-pi2"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="companyTicker" destination="Qh9-tw-lCm" id="yko-nt-VRr"/>
+                                    <segue destination="tYe-WK-uKm" kind="presentation" id="0cd-QW-lHT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -314,16 +332,11 @@
                                 <action selector="signOut:" destination="QM7-3b-ES3" id="43t-wz-slp"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Apple" id="C8W-NW-mzA">
-                            <connections>
-                                <segue destination="tYe-WK-uKm" kind="presentation" id="vHd-oW-Skj"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjr-d1-XUY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3681" y="69"/>
+            <point key="canvasLocation" x="3679.7101449275365" y="68.973214285714278"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="DFa-Sk-BGM">

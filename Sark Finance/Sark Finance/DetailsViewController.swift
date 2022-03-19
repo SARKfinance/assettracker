@@ -44,12 +44,13 @@ class DetailsViewController: UIViewController {
     
     var details = [String:Any]()
     var branding = [String:Any] ()
+    var ticker: String = ""
     
 
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL(string:"https://api.polygon.io/v3/reference/tickers/SBUX?apiKey=iOuM5gLKJ37tjoCXjIW6elzWLRdbCsZw")!
+        let url = URL(string:"https://api.polygon.io/v3/reference/tickers/" + self.ticker + "?apiKey=iOuM5gLKJ37tjoCXjIW6elzWLRdbCsZw")!
         print(url)
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)

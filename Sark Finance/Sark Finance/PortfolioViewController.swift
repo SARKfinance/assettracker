@@ -8,8 +8,11 @@
 import UIKit
 import Parse
 
-class PortfolioViewController: UITableViewController  {
 
+
+class PortfolioViewController: UITableViewController  {
+    var companies = ["AAPL", "MSFT", "DIS", "SBUX", "YELP", "GOOG", "AMZN", "LUV", "UAL"]
+    
     @IBAction func signOut(_ sender: Any) {
         PFUser.logOut()
         
@@ -32,25 +35,26 @@ class PortfolioViewController: UITableViewController  {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return companies.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PortfolioViewCell") as! PortfolioViewCell
+        
+        cell.companyTicker.text = companies[indexPath.row]
+        
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -87,14 +91,25 @@ class PortfolioViewController: UITableViewController  {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        // Get the new view controller and pass the Youtube URL
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let ticker = companies[indexPath.row]
+        
+        let DetailsViewController = segue.destination as! DetailsViewController
+        DetailsViewController.ticker = ticker
+
+        
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }
