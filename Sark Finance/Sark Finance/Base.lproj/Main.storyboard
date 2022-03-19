@@ -435,7 +435,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMPANY NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A40-9k-wYE">
-                                <rect key="frame" x="10" y="10" width="394" height="33"/>
+                                <rect key="frame" x="10" y="10" width="369" height="33"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -562,7 +562,7 @@
                             <constraint firstItem="vYX-Hq-01t" firstAttribute="leading" secondItem="Qhc-XC-fgr" secondAttribute="leading" constant="10" id="f4e-DN-r5w"/>
                             <constraint firstItem="cih-gF-QV8" firstAttribute="top" secondItem="jhv-cb-em7" secondAttribute="bottom" constant="20" id="f8P-JR-soB"/>
                             <constraint firstItem="cih-gF-QV8" firstAttribute="leading" secondItem="Qhc-XC-fgr" secondAttribute="leading" constant="10" id="jaK-qb-jed"/>
-                            <constraint firstItem="Qhc-XC-fgr" firstAttribute="trailing" secondItem="A40-9k-wYE" secondAttribute="trailing" constant="10" id="kcn-LS-fyE"/>
+                            <constraint firstItem="Qhc-XC-fgr" firstAttribute="trailing" secondItem="A40-9k-wYE" secondAttribute="trailing" constant="35" id="kcn-LS-fyE"/>
                             <constraint firstItem="Qhc-XC-fgr" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vYX-Hq-01t" secondAttribute="bottom" constant="10" id="mhz-M6-ePq"/>
                             <constraint firstItem="A40-9k-wYE" firstAttribute="leading" secondItem="Qhc-XC-fgr" secondAttribute="leading" constant="10" id="qEg-8V-OOt"/>
                             <constraint firstItem="gtc-eh-K86" firstAttribute="leading" secondItem="Qhc-XC-fgr" secondAttribute="leading" constant="10" id="sQc-di-DDS"/>
