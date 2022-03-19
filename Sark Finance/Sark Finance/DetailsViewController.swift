@@ -7,6 +7,7 @@
 
 import UIKit
 import Foundation
+import AlamofireImage
 
 struct Root: Decodable {
     let results: Results
@@ -14,6 +15,14 @@ struct Root: Decodable {
 
 struct Results: Decodable {
     let branding: Branding
+    let name: String
+    let description: String
+    let ticker_root: String
+    let total_employees: Int
+    let list_date: String
+    let share_class_shares_outstanding: Int
+    let market_cap: Double
+    
 }
 
 struct Branding: Decodable {
@@ -26,9 +35,16 @@ struct Branding: Decodable {
 class DetailsViewController: UIViewController {
     @IBOutlet weak var companyName: UILabel!
     @IBOutlet weak var companyDetails: UILabel!
+    @IBOutlet weak var companyLogo: UIImageView!
+    @IBOutlet weak var companyTicker: UILabel!
+    @IBOutlet weak var companyDate: UILabel!
+    @IBOutlet weak var companyEmployees: UILabel!
+    @IBOutlet weak var companyShares: UILabel!
+    @IBOutlet weak var companyMktCap: UILabel!
     
     var details = [String:Any]()
     var branding = [String:Any] ()
+    
 
    
     override func viewDidLoad() {
@@ -43,26 +59,42 @@ class DetailsViewController: UIViewController {
                     print(error.localizedDescription)
              } else if let data = data {
                 
-                 
+                 // Decode JSON dictionary with Decodable structs
                  let resultsDict = try? JSONDecoder().decode(Root.self, from: data)
-
-                 // Get array of movie videos
-                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                  
-
-                
-                 // Store movie video information in property
-                 self.details = dataDictionary["results"] as! [String:Any]
+                // Set company name and details
+                 self.companyName.text = resultsDict?.results.name
+                 self.companyDetails.text = resultsDict?.results.description
                  
-                 print(self.details)
-                 self.companyName.text = (self.details["name"] as! String)
-                
-                 self.companyDetails.text = (self.details["description"] as! String)
+                 self.companyTicker.text = resultsDict?.results.ticker_root
+                 self.companyDate.text = resultsDict?.results.list_date
+                 if let numEmployees = resultsDict?.results.total_employees {
+                     self.companyEmployees.text = String(numEmployees)
+                 }
+                 if let numShares = resultsDict?.results.share_class_shares_outstanding {
+                     self.companyShares.text = String(numShares)
+                 }
                  
-                 print(self.details["branding"] as Any)
+                 if let mktCap = resultsDict?.results.market_cap {
+                     
+                     let currFormatter = NumberFormatter()
+                     currFormatter.numberStyle = .currency
+                     self.companyMktCap.text = currFormatter.string(from: NSNumber(value: mktCap))
+                 }
                  
+                 
+                 
+                 
+                 // Parse out icon url, then create request with bearer authorization token and set image with AF
                  if let icon_url = resultsDict?.results.branding.icon_url {
                      print(icon_url)
+                     
+                     var iconRequest = URLRequest(url: URL(string: icon_url)!)
+                     iconRequest.addValue("Bearer " + "iOuM5gLKJ37tjoCXjIW6elzWLRdbCsZw", forHTTPHeaderField: "Authorization")
+
+                     
+
+                     self.companyLogo.af.setImage(withURLRequest: iconRequest)
                  }
 
              }
