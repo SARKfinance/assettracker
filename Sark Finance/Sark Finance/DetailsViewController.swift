@@ -29,7 +29,10 @@ class DetailsViewController: UIViewController {
     var branding = [String:Any] ()
     var ticker: String = ""
     
-
+    @IBAction func dismissButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
    
     override func viewDidLoad() {
         super.viewDidLoad()

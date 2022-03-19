@@ -26,7 +26,6 @@ class SignUpViewController: UIViewController {
     @IBAction func onCancel(_ sender: Any) {
         //testing code
         self.dismiss(animated: true, completion: nil)
-        print("clicked cancel")
     }
     
     @IBAction func onSignUp(_ sender: Any) {
