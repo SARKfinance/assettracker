@@ -33,7 +33,7 @@ struct Branding: Decodable {
 
 
 class PortfolioViewController: UITableViewController  {
-    var companies = ["AAPL", "DIS", "MSFT", "CMG"]
+    var companies = ["AAPL", "DIS", "BBY", "Z"]
     
     
     
@@ -130,6 +130,7 @@ class PortfolioViewController: UITableViewController  {
                  // Display market cap with 2 decimal places and in millions/trillions/billions
                  if let mktCap = resultsDict?.results.market_cap {
                      var sharePrice:Double = ((resultsDict?.results.market_cap)!/Double((resultsDict?.results.share_class_shares_outstanding)!))
+                     cell.companyPrice.text = String(format: "$%.2f", sharePrice)
                      //self.companyMktCap.text = mktCap.roundedWithCurrAbbrev
                  }
                  

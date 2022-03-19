@@ -13,6 +13,15 @@ class PortfolioViewCell: UITableViewCell {
     @IBOutlet weak var companyTicker: UILabel!
     @IBOutlet weak var companyName: UILabel!
     
+    @IBOutlet weak var companyPrice: UILabel!
+    
+    @IBOutlet weak var qtyHeld: UILabel!
+    
+    
+    @IBOutlet weak var currValue: UILabel!
+    
+    @IBOutlet weak var brokerageName: UILabel!
+    
     var data: Data? = nil
     
     override func awakeFromNib() {
