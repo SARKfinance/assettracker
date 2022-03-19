@@ -9,7 +9,11 @@ import UIKit
 
 class PortfolioViewCell: UITableViewCell {
 
+    @IBOutlet weak var companyIcon: UIImageView!
     @IBOutlet weak var companyTicker: UILabel!
+    @IBOutlet weak var companyName: UILabel!
+    
+    var data: Data? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
