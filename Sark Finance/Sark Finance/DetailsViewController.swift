@@ -26,8 +26,8 @@ struct Results: Decodable {
 }
 
 struct Branding: Decodable {
-    let icon_url: String
-    let logo_url: String
+    let icon_url: String?
+    let logo_url: String?
 }
 
 
@@ -49,7 +49,7 @@ class DetailsViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL(string:"https://api.polygon.io/v3/reference/tickers/AAPL?apiKey=iOuM5gLKJ37tjoCXjIW6elzWLRdbCsZw")!
+        let url = URL(string:"https://api.polygon.io/v3/reference/tickers/SBUX?apiKey=iOuM5gLKJ37tjoCXjIW6elzWLRdbCsZw")!
         print(url)
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
