@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func onLogin(_ sender: Any) {
-        print("Clicked on Login button, need to update Parse for app")
+        //print("Clicked on Login button, need to update Parse for app")
         let username = usernameField.text!
         let password = passwordField.text!
 
@@ -41,8 +41,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onSignup(_ sender: Any) {
-        print("Clicked on Sign up button")
-        print("Should direct to Sign up Page")
+        //print("Clicked on Sign up button")
+        //print("Should direct to Sign up Page")
         
         
     }
