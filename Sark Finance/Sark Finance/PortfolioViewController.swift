@@ -202,7 +202,7 @@ class PortfolioViewController: UITableViewController  {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         
-        // Get the new view controller and pass the Youtube URL
+        // Prepare to pass cell data and ticker information to the details view
         let cell = sender as! PortfolioViewCell
         let indexPath = tableView.indexPath(for: cell)!
         let ticker = companies[indexPath.row]
