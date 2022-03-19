@@ -68,19 +68,37 @@ class DetailsViewController: UIViewController {
                  self.companyDetails.text = resultsDict?.results.description
                  
                  self.companyTicker.text = resultsDict?.results.ticker_root
-                 self.companyDate.text = resultsDict?.results.list_date
-                 if let numEmployees = resultsDict?.results.total_employees {
-                     self.companyEmployees.text = String(numEmployees)
-                 }
-                 if let numShares = resultsDict?.results.share_class_shares_outstanding {
-                     self.companyShares.text = String(numShares)
+                 
+                 
+                 // Format date as Month Day, Year
+                 if let dateString = resultsDict?.results.list_date {
+                     let dateParser = DateFormatter()
+                     dateParser.dateFormat = "yyyy-MM-dd"
+                     
+                     let datePrint = DateFormatter()
+                     datePrint.dateFormat = "MMM dd, yyyy"
+                     
+                     let formattedDate: NSDate? = dateParser.date(from: dateString) as NSDate?
+                     
+                     self.companyDate.text = datePrint.string(from: formattedDate! as Date)
+                     
                  }
                  
+                 // Display number of employees with commas
+                 if let numEmployees = resultsDict?.results.total_employees {
+                     let commaFormat = NumberFormatter()
+                     commaFormat.numberStyle = .decimal
+                     self.companyEmployees.text = commaFormat.string(from: NSNumber(value: numEmployees))
+                 }
+                 
+                 // Display number of shares in millions/trillions
+                 if let numShares = resultsDict?.results.share_class_shares_outstanding {
+                     self.companyShares.text = numShares.roundedWithAbbrev
+                 }
+                 
+                 // Display market cap with 2 decimal places and in millions/trillions/billions
                  if let mktCap = resultsDict?.results.market_cap {
-                     
-                     let currFormatter = NumberFormatter()
-                     currFormatter.numberStyle = .currency
-                     self.companyMktCap.text = currFormatter.string(from: NSNumber(value: mktCap))
+                     self.companyMktCap.text = mktCap.roundedWithCurrAbbrev
                  }
                  
                  

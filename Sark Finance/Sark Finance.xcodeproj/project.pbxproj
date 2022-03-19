@@ -24,6 +24,8 @@
 		EC6CB44027E53E4A002503A8 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB43F27E53E4A002503A8 /* PortfolioViewController.swift */; };
 		EC6CB44227E58B0E002503A8 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB44127E58B0E002503A8 /* DetailsViewController.swift */; };
 		EC6CB44427E63BA9002503A8 /* PortfolioViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB44327E63BA8002503A8 /* PortfolioViewCell.swift */; };
+		EC6CB44727E65AD4002503A8 /* Integer+Abbreviations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB44627E65AD4002503A8 /* Integer+Abbreviations.swift */; };
+		EC6CB44927E65C50002503A8 /* Double+Currency+Abbrev.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB44827E65C50002503A8 /* Double+Currency+Abbrev.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		EC6CB43F27E53E4A002503A8 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		EC6CB44127E58B0E002503A8 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		EC6CB44327E63BA8002503A8 /* PortfolioViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewCell.swift; sourceTree = "<group>"; };
+		EC6CB44627E65AD4002503A8 /* Integer+Abbreviations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Integer+Abbreviations.swift"; sourceTree = "<group>"; };
+		EC6CB44827E65C50002503A8 /* Double+Currency+Abbrev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Currency+Abbrev.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,7 @@
 		EC65241627E17D9F0072DD3B /* Sark Finance */ = {
 			isa = PBXGroup;
 			children = (
+				EC6CB44527E65AA4002503A8 /* Extensions */,
 				EC65241727E17D9F0072DD3B /* AppDelegate.swift */,
 				EC65241927E17D9F0072DD3B /* SceneDelegate.swift */,
 				EC65241B27E17D9F0072DD3B /* ViewController.swift */,
@@ -180,6 +185,15 @@
 				EC65243A27E17DA20072DD3B /* Sark_FinanceUITestsLaunchTests.swift */,
 			);
 			path = "Sark FinanceUITests";
+			sourceTree = "<group>";
+		};
+		EC6CB44527E65AA4002503A8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EC6CB44627E65AD4002503A8 /* Integer+Abbreviations.swift */,
+				EC6CB44827E65C50002503A8 /* Double+Currency+Abbrev.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,11 +438,13 @@
 				EC65241C27E17D9F0072DD3B /* ViewController.swift in Sources */,
 				EC6CB44027E53E4A002503A8 /* PortfolioViewController.swift in Sources */,
 				EC65241827E17D9F0072DD3B /* AppDelegate.swift in Sources */,
+				EC6CB44927E65C50002503A8 /* Double+Currency+Abbrev.swift in Sources */,
 				EC6CB44427E63BA9002503A8 /* PortfolioViewCell.swift in Sources */,
 				5EB85C7627E397C300A78AB3 /* SignUpViewController.swift in Sources */,
 				EC6CB44227E58B0E002503A8 /* DetailsViewController.swift in Sources */,
 				93E138F827E44237007609C3 /* LoginViewController.swift in Sources */,
 				EC65241A27E17D9F0072DD3B /* SceneDelegate.swift in Sources */,
+				EC6CB44727E65AD4002503A8 /* Integer+Abbreviations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
