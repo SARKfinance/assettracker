@@ -23,6 +23,7 @@
 		EC65243927E17DA20072DD3B /* Sark_FinanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65243827E17DA20072DD3B /* Sark_FinanceUITests.swift */; };
 		EC65243B27E17DA20072DD3B /* Sark_FinanceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65243A27E17DA20072DD3B /* Sark_FinanceUITestsLaunchTests.swift */; };
 		EC6CB44027E53E4A002503A8 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB43F27E53E4A002503A8 /* PortfolioViewController.swift */; };
+		EC6CB44227E58B0E002503A8 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB44127E58B0E002503A8 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		EC65243827E17DA20072DD3B /* Sark_FinanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sark_FinanceUITests.swift; sourceTree = "<group>"; };
 		EC65243A27E17DA20072DD3B /* Sark_FinanceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sark_FinanceUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EC6CB43F27E53E4A002503A8 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
+		EC6CB44127E58B0E002503A8 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				EC65242527E17DA10072DD3B /* Info.plist */,
 				5EB85C7527E397C300A78AB3 /* SignUpViewController.swift */,
 				EC6CB43F27E53E4A002503A8 /* PortfolioViewController.swift */,
+				EC6CB44127E58B0E002503A8 /* DetailsViewController.swift */,
 			);
 			path = "Sark Finance";
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				EC6CB44027E53E4A002503A8 /* PortfolioViewController.swift in Sources */,
 				EC65241827E17D9F0072DD3B /* AppDelegate.swift in Sources */,
 				5EB85C7627E397C300A78AB3 /* SignUpViewController.swift in Sources */,
+				EC6CB44227E58B0E002503A8 /* DetailsViewController.swift in Sources */,
 				93E138F827E44237007609C3 /* LoginViewController.swift in Sources */,
 				EC65241A27E17D9F0072DD3B /* SceneDelegate.swift in Sources */,
 			);
