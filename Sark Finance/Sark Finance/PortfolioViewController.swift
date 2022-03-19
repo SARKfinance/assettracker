@@ -33,7 +33,7 @@ struct Branding: Decodable {
 
 
 class PortfolioViewController: UITableViewController  {
-    var companies = ["AAPL", "DIS", "BBY", "Z"]
+    var companies = ["AAPL", "DIS", "BBY", "Z", "CMG"]
     
     
     
