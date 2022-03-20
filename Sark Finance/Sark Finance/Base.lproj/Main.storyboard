@@ -390,11 +390,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PortfolioViewCell" rowHeight="174" id="vo5-6y-ddg" customClass="PortfolioViewCell" customModule="Sark_Finance" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="174"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PortfolioViewCell" rowHeight="197" id="vo5-6y-ddg" customClass="PortfolioViewCell" customModule="Sark_Finance" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="197"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vo5-6y-ddg" id="a8U-6w-03a">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="174"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="197"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ticker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qh9-tw-lCm">
@@ -443,6 +443,13 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CURRENT PRICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjD-r1-luM">
+                                            <rect key="frame" x="227" y="49" width="129" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QTY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sps-hY-Wg2">
                                             <rect key="frame" x="227" y="80" width="129" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -464,27 +471,30 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CURRENT PRICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjD-r1-luM">
-                                            <rect key="frame" x="227" y="49" width="129" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlw-Ej-KcQ">
+                                            <rect key="frame" x="10" y="148" width="44" height="31"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="trash.fill" catalog="system"/>
+                                            <connections>
+                                                <action selector="deleteInvestment:" destination="vo5-6y-ddg" eventType="touchUpInside" id="lhH-S2-mFM"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="pMf-l6-MSN" firstAttribute="leading" secondItem="a8U-6w-03a" secondAttribute="leading" constant="10" id="2xa-Bx-onk"/>
                                         <constraint firstItem="xYG-Ge-j0G" firstAttribute="top" secondItem="a8U-6w-03a" secondAttribute="top" constant="10" id="3ou-ie-Yjp"/>
                                         <constraint firstItem="Grc-hJ-LaW" firstAttribute="top" secondItem="1Vm-Pz-bHQ" secondAttribute="bottom" constant="10" id="4Je-er-pEf"/>
-                                        <constraint firstItem="Qh9-tw-lCm" firstAttribute="top" secondItem="pMf-l6-MSN" secondAttribute="bottom" constant="10" id="8oi-8x-ckh"/>
+                                        <constraint firstItem="zlw-Ej-KcQ" firstAttribute="leading" secondItem="a8U-6w-03a" secondAttribute="leading" constant="10" id="6TS-HY-es8"/>
                                         <constraint firstItem="Uup-rc-6XT" firstAttribute="top" secondItem="Grc-hJ-LaW" secondAttribute="bottom" constant="10" id="9bQ-zR-l9T"/>
                                         <constraint firstItem="Grc-hJ-LaW" firstAttribute="top" secondItem="1Vm-Pz-bHQ" secondAttribute="bottom" constant="10" id="9fJ-EJ-lJc"/>
                                         <constraint firstItem="Grc-hJ-LaW" firstAttribute="leading" secondItem="Qh9-tw-lCm" secondAttribute="trailing" constant="10" id="AF0-u7-X8p"/>
+                                        <constraint firstItem="Qh9-tw-lCm" firstAttribute="top" secondItem="pMf-l6-MSN" secondAttribute="bottom" constant="10" id="Knb-QI-vwB"/>
                                         <constraint firstItem="1Vm-Pz-bHQ" firstAttribute="top" secondItem="v6v-L5-AjX" secondAttribute="bottom" constant="10" id="NK9-TD-OdY"/>
                                         <constraint firstItem="Uup-rc-6XT" firstAttribute="leading" secondItem="Qh9-tw-lCm" secondAttribute="trailing" constant="10" id="Orr-Kq-O8L"/>
-                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Qh9-tw-lCm" secondAttribute="bottom" constant="10" id="VLu-gQ-Lww"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zlw-Ej-KcQ" secondAttribute="bottom" constant="10" id="PJU-fd-gmN"/>
                                         <constraint firstAttribute="trailing" secondItem="xYG-Ge-j0G" secondAttribute="trailing" constant="10" id="ZIK-Td-KnG"/>
                                         <constraint firstItem="pMf-l6-MSN" firstAttribute="top" secondItem="a8U-6w-03a" secondAttribute="top" constant="10" id="edh-u0-qSV"/>
+                                        <constraint firstItem="zlw-Ej-KcQ" firstAttribute="top" secondItem="Qh9-tw-lCm" secondAttribute="bottom" constant="7.5" id="fH0-re-JQy"/>
                                         <constraint firstItem="xYG-Ge-j0G" firstAttribute="leading" secondItem="pMf-l6-MSN" secondAttribute="trailing" constant="10" id="hV1-n3-lhg"/>
                                         <constraint firstItem="v6v-L5-AjX" firstAttribute="leading" secondItem="pMf-l6-MSN" secondAttribute="trailing" constant="10" id="hvg-6r-W6Q"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Uup-rc-6XT" secondAttribute="bottom" constant="10" id="tEC-rD-ieM"/>
@@ -501,7 +511,7 @@
                                     <outlet property="companyTicker" destination="Qh9-tw-lCm" id="yko-nt-VRr"/>
                                     <outlet property="currValue" destination="n0e-ju-JSn" id="a8t-gl-YYP"/>
                                     <outlet property="qtyHeld" destination="sps-hY-Wg2" id="nwm-s6-a8c"/>
-                                    <segue destination="tYe-WK-uKm" kind="presentation" identifier="detailsSegue" id="0cd-QW-lHT"/>
+                                    <segue destination="tYe-WK-uKm" kind="presentation" identifier="detailsSegue" id="WFU-KY-oby"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -525,7 +535,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjr-d1-XUY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4223" y="-1041"/>
+            <point key="canvasLocation" x="4250.7246376811599" y="-1041.2946428571429"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="DFa-Sk-BGM">
@@ -730,6 +740,7 @@
         <image name="plus.app.fill" catalog="system" width="128" height="114"/>
         <image name="signuplabel" width="294" height="78"/>
         <image name="smiley" catalog="system" width="128" height="121"/>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class PortfolioViewCell: UITableViewCell {
 
@@ -23,6 +24,7 @@ class PortfolioViewCell: UITableViewCell {
     @IBOutlet weak var brokerageName: UILabel!
     
     var data: Data? = nil
+    var investment = PFObject(className: "investments")
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,4 +37,11 @@ class PortfolioViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func deleteInvestment(_ sender: Any) {
+        investment.deleteInBackground()
+        NotificationCenter.default.post(name: NSNotification.Name("refresh"), object: nil)
+        print("Deleting investment!")
+    }
+    
+    
 }

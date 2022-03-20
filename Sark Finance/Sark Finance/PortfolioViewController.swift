@@ -36,6 +36,7 @@ class PortfolioViewController: UITableViewController  {
     var companies = [String]()
     var investments = [PFObject]()
     
+    
 //    var companies = ["AAPL", "DIS", "BBY", "Z", "CMG"]
     
     
@@ -55,8 +56,11 @@ class PortfolioViewController: UITableViewController  {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadInvestments()
-
+        NotificationCenter.default.addObserver(forName: Notification.Name("refresh"), object: nil, queue: OperationQueue.main) {(Notification) in
+            print("Notification received!")
+            self.loadInvestments()
+            
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -109,6 +113,7 @@ class PortfolioViewController: UITableViewController  {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PortfolioViewCell") as! PortfolioViewCell
         
         let investment = self.investments[indexPath.row]
+        cell.investment = investment
         
 //        let url = URL(string:"https://api.polygon.io/v3/reference/tickers/" + companies[indexPath.row] + "?apiKey=" + self.pgonk1 + self.pgonk2)!
         let url = URL(string:"https://api.polygon.io/v3/reference/tickers/" + (investment["ticker"] as! String) + "?apiKey=" + self.pgonk1 + self.pgonk2)!
@@ -127,6 +132,11 @@ class PortfolioViewController: UITableViewController  {
                  cell.data = data
                  
                  cell.companyName.text = resultsDict?.results.name
+                 
+                 let tap = UITapGestureRecognizer(target:self, action: #selector(self.didPressLabel))
+                 cell.companyName.addGestureRecognizer(tap)
+                 
+                 
                  
                 // Set company name and details
 //                 self.companyName.text = resultsDict?.results.name
@@ -198,6 +208,12 @@ class PortfolioViewController: UITableViewController  {
         cell.brokerageName.text = investment["brokerage"] as! String
 
         return cell
+    }
+    
+    @objc
+    func didPressLabel (_ sender:UITapGestureRecognizer) {
+        print("Label tapped!")
+//        performSegue(withIdentifier: "detailsSegue", sender: PortfolioViewCell.self)
     }
     
 
