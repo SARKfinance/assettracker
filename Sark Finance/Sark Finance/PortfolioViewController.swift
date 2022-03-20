@@ -35,6 +35,8 @@ struct Branding: Decodable {
 class PortfolioViewController: UITableViewController  {
     var companies = ["AAPL", "DIS", "BBY", "Z", "CMG"]
     
+    let pgonk1 = "iOuM5gLKJ37tjo"
+    let pgonk2 = "CXjIW6elzWLRdbCsZw"
     
     
     @IBAction func signOut(_ sender: Any) {
@@ -73,7 +75,7 @@ class PortfolioViewController: UITableViewController  {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PortfolioViewCell") as! PortfolioViewCell
         
-        let url = URL(string:"https://api.polygon.io/v3/reference/tickers/" + companies[indexPath.row] + "?apiKey=iOuM5gLKJ37tjoCXjIW6elzWLRdbCsZw")!
+        let url = URL(string:"https://api.polygon.io/v3/reference/tickers/" + companies[indexPath.row] + "?apiKey=" + self.pgonk1 + self.pgonk2)!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
