@@ -301,6 +301,86 @@
             </objects>
             <point key="canvasLocation" x="3604" y="-19"/>
         </scene>
+        <!--Add Investment-->
+        <scene sceneID="bYh-Tk-jDf">
+            <objects>
+                <viewController id="0uI-iF-P9Y" customClass="AddPortfolioViewController" customModule="Sark_Finance" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dpK-N0-XpN" customClass="ADBannerView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JAI-SD-4nE">
+                                <rect key="frame" x="237" y="109" width="157" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F9E-m0-6hR">
+                                <rect key="frame" x="237" y="167" width="157" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LYT-WY-VDp">
+                                <rect key="frame" x="237" y="228" width="157" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ticker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clr-hB-R32">
+                                <rect key="frame" x="20" y="116" width="51" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of Shares" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNk-sG-hPG">
+                                <rect key="frame" x="20" y="174" width="147" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brokerage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVT-An-jRr">
+                                <rect key="frame" x="20" y="235" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRL-rG-270">
+                                <rect key="frame" x="36" y="324" width="105" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="0uI-iF-P9Y" eventType="touchUpInside" id="pxD-eL-3B2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEL-sj-HgM">
+                                <rect key="frame" x="278" y="324" width="116" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Cancel"/>
+                                <connections>
+                                    <action selector="onCancel:" destination="0uI-iF-P9Y" eventType="touchUpInside" id="ctk-I9-0AG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RXj-c6-38h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Investment" id="Wtl-x9-uIF"/>
+                    <connections>
+                        <outlet property="brokerageName" destination="LYT-WY-VDp" id="r7T-u2-fLC"/>
+                        <outlet property="numShares" destination="F9E-m0-6hR" id="vKZ-hi-swH"/>
+                        <outlet property="tickerName" destination="JAI-SD-4nE" id="Bvy-iQ-7r9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gQl-YM-fPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4979.7101449275369" y="-1742.4107142857142"/>
+        </scene>
         <!--Portfolio-->
         <scene sceneID="FUZ-j9-cfY">
             <objects>
@@ -421,7 +501,7 @@
                                     <outlet property="companyTicker" destination="Qh9-tw-lCm" id="yko-nt-VRr"/>
                                     <outlet property="currValue" destination="n0e-ju-JSn" id="a8t-gl-YYP"/>
                                     <outlet property="qtyHeld" destination="sps-hY-Wg2" id="nwm-s6-a8c"/>
-                                    <segue destination="tYe-WK-uKm" kind="presentation" id="0cd-QW-lHT"/>
+                                    <segue destination="tYe-WK-uKm" kind="presentation" identifier="detailsSegue" id="0cd-QW-lHT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -434,6 +514,11 @@
                         <barButtonItem key="leftBarButtonItem" title="Sign Out" id="JvP-jN-heS">
                             <connections>
                                 <action selector="signOut:" destination="QM7-3b-ES3" id="43t-wz-slp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus.app.fill" catalog="system" id="Wnz-6J-8fq">
+                            <connections>
+                                <segue destination="0uI-iF-P9Y" kind="show" id="V4u-o3-jvW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -555,13 +640,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgf-0Q-Hqa">
-                                <rect key="frame" x="373" y="0.0" width="38" height="50"/>
+                                <rect key="frame" x="370" y="10" width="45" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGray2Color"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="x">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark.circle.fill" catalog="system"/>
                                 <connections>
                                     <action selector="dismissButton:" destination="tYe-WK-uKm" eventType="touchUpInside" id="EqL-2f-ash"/>
                                 </connections>
@@ -644,8 +727,10 @@
     <resources>
         <image name="SFlogo" width="320" height="240"/>
         <image name="dollarsign.square" catalog="system" width="128" height="114"/>
+        <image name="plus.app.fill" catalog="system" width="128" height="114"/>
         <image name="signuplabel" width="294" height="78"/>
         <image name="smiley" catalog="system" width="128" height="121"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

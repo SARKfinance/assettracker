@@ -26,6 +26,7 @@
 		EC6CB44427E63BA9002503A8 /* PortfolioViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB44327E63BA8002503A8 /* PortfolioViewCell.swift */; };
 		EC6CB44727E65AD4002503A8 /* Integer+Abbreviations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB44627E65AD4002503A8 /* Integer+Abbreviations.swift */; };
 		EC6CB44927E65C50002503A8 /* Double+Currency+Abbrev.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB44827E65C50002503A8 /* Double+Currency+Abbrev.swift */; };
+		EC6CB44B27E78986002503A8 /* AddPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB44A27E78986002503A8 /* AddPortfolioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		EC6CB44327E63BA8002503A8 /* PortfolioViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewCell.swift; sourceTree = "<group>"; };
 		EC6CB44627E65AD4002503A8 /* Integer+Abbreviations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Integer+Abbreviations.swift"; sourceTree = "<group>"; };
 		EC6CB44827E65C50002503A8 /* Double+Currency+Abbrev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Currency+Abbrev.swift"; sourceTree = "<group>"; };
+		EC6CB44A27E78986002503A8 /* AddPortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPortfolioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				EC6CB43F27E53E4A002503A8 /* PortfolioViewController.swift */,
 				EC6CB44127E58B0E002503A8 /* DetailsViewController.swift */,
 				EC6CB44327E63BA8002503A8 /* PortfolioViewCell.swift */,
+				EC6CB44A27E78986002503A8 /* AddPortfolioViewController.swift */,
 			);
 			path = "Sark Finance";
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				EC65241C27E17D9F0072DD3B /* ViewController.swift in Sources */,
 				EC6CB44027E53E4A002503A8 /* PortfolioViewController.swift in Sources */,
 				EC65241827E17D9F0072DD3B /* AppDelegate.swift in Sources */,
+				EC6CB44B27E78986002503A8 /* AddPortfolioViewController.swift in Sources */,
 				EC6CB44927E65C50002503A8 /* Double+Currency+Abbrev.swift in Sources */,
 				EC6CB44427E63BA9002503A8 /* PortfolioViewCell.swift in Sources */,
 				5EB85C7627E397C300A78AB3 /* SignUpViewController.swift in Sources */,

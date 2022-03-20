@@ -33,7 +33,11 @@ struct Branding: Decodable {
 
 
 class PortfolioViewController: UITableViewController  {
-    var companies = ["AAPL", "DIS", "BBY", "Z", "CMG"]
+    var companies = [String]()
+    var investments = [PFObject]()
+    
+//    var companies = ["AAPL", "DIS", "BBY", "Z", "CMG"]
+    
     
     let pgonk1 = "iOuM5gLKJ37tjo"
     let pgonk2 = "CXjIW6elzWLRdbCsZw"
@@ -51,13 +55,42 @@ class PortfolioViewController: UITableViewController  {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadInvestments()
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadInvestments()
+    }
+    
+    func loadInvestments() {
+        self.investments = []
+        self.tableView.reloadData()
+        
+        let user = PFUser.current()
+        let query = PFQuery(className: "investments")
+        query.whereKey("owner", equalTo: user)
+        
+        query.findObjectsInBackground { (investments, error) in
+            if investments != nil {
+                self.investments = investments!
+                self.tableView.reloadData()
+                
+            }
+        }
+        
+    }
+        
+        
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
+
 
     // MARK: - Table view data source
 
@@ -68,14 +101,17 @@ class PortfolioViewController: UITableViewController  {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return companies.count
+        return investments.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PortfolioViewCell") as! PortfolioViewCell
         
-        let url = URL(string:"https://api.polygon.io/v3/reference/tickers/" + companies[indexPath.row] + "?apiKey=" + self.pgonk1 + self.pgonk2)!
+        let investment = self.investments[indexPath.row]
+        
+//        let url = URL(string:"https://api.polygon.io/v3/reference/tickers/" + companies[indexPath.row] + "?apiKey=" + self.pgonk1 + self.pgonk2)!
+        let url = URL(string:"https://api.polygon.io/v3/reference/tickers/" + (investment["ticker"] as! String) + "?apiKey=" + self.pgonk1 + self.pgonk2)!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
@@ -132,16 +168,18 @@ class PortfolioViewController: UITableViewController  {
                  // Display market cap with 2 decimal places and in millions/trillions/billions
                  if let mktCap = resultsDict?.results.market_cap {
                      var sharePrice:Double = ((resultsDict?.results.market_cap)!/Double((resultsDict?.results.share_class_shares_outstanding)!))
+                     let numShares = Double(investment["numShares"] as! String) ?? 0
+                     let totalValue = sharePrice * numShares
                      cell.companyPrice.text = String(format: "$%.2f", sharePrice)
+                     cell.currValue.text = String(format: "$%.2f", totalValue)
                      //self.companyMktCap.text = mktCap.roundedWithCurrAbbrev
                  }
                  
                  
-                 
+                 cell.companyIcon.image = nil
                  
                  // Parse out icon url, then create request with bearer authorization token and set image with AF
                  if let icon_url = resultsDict?.results.branding.icon_url {
-                     print(icon_url)
                      
                      var iconRequest = URLRequest(url: URL(string: icon_url)!)
                      iconRequest.addValue("Bearer " + "iOuM5gLKJ37tjoCXjIW6elzWLRdbCsZw", forHTTPHeaderField: "Authorization")
@@ -155,9 +193,9 @@ class PortfolioViewController: UITableViewController  {
         }
         task.resume()
         
-        
-        cell.companyTicker.text = companies[indexPath.row]
-        
+        cell.companyTicker.text = investment["ticker"] as! String
+        cell.qtyHeld.text = investment["numShares"] as! String
+        cell.brokerageName.text = investment["brokerage"] as! String
 
         return cell
     }
@@ -204,16 +242,18 @@ class PortfolioViewController: UITableViewController  {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        
-        // Prepare to pass cell data and ticker information to the details view
-        let cell = sender as! PortfolioViewCell
-        let indexPath = tableView.indexPath(for: cell)!
-        let ticker = companies[indexPath.row]
-        
-        let DetailsViewController = segue.destination as! DetailsViewController
-        DetailsViewController.ticker = ticker
-        // Pass raw data to details view from cell
-        DetailsViewController.data = cell.data
+        if segue.identifier == "detailsSegue" {
+            // Prepare to pass cell data and ticker information to the details view
+            let cell = sender as! PortfolioViewCell
+            let indexPath = tableView.indexPath(for: cell)!
+            let ticker = investments[indexPath.row]["ticker"]
+            
+            let DetailsViewController = segue.destination as! DetailsViewController
+            DetailsViewController.ticker = ticker as! String
+            // Pass raw data to details view from cell
+            DetailsViewController.data = cell.data
+        }
+
 
         
         // Get the new view controller using segue.destination.
