@@ -45,9 +45,11 @@ The SARK Finance app allows users to consolidate their investments into one port
 - [ ] Show suggested tickers when user is typing in a ticker to add (autocomplete)
 
 ** User Sign up & Login Demo GIF
+
 <img src="https://github.com/SARKfinance/assettracker/blob/main/Sark%20Finance%20-%20Sign%20up%20%26%20Login%20Demo.gif" height=350>
 
 ** Portfolio Create/Read/Update/Delete
+
 <img src="https://github.com/SARKfinance/assettracker/blob/main/Sark%20Finance%20-%20Portfolio%20CRUD%20operations%20Demo.gif" height=350>
 
 ### 2. Screen Archetypes
