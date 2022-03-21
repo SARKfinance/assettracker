@@ -48,7 +48,7 @@ The SARK Finance app allows users to consolidate their investments into one port
 
 <img src="https://github.com/SARKfinance/assettracker/blob/main/Sark%20Finance%20-%20Sign%20up%20%26%20Login%20Demo.gif" height=350>
 
-**Portfolio Create/Read/Update/Delete**
+**Portfolio Create/Read/Update/Delete and view details about a company**
 
 <img src="https://github.com/SARKfinance/assettracker/blob/main/Sark%20Finance%20-%20Portfolio%20CRUD%20operations%20Demo.gif" height=350>
 
