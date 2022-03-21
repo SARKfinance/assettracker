@@ -42,7 +42,7 @@ The SARK Finance app allows users to consolidate their investments into one port
 
 - [ ] Users can chat with other users about their investments
 - [ ] Users can see daily/weekly/monthly trends about their portfolio
-- [ ] Show suggested tickers when user is typing in a ticker to add
+- [ ] Show suggested tickers when user is typing in a ticker to add (autocomplete)
 
 
 ### 2. Screen Archetypes
