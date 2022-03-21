@@ -29,17 +29,20 @@ The SARK Finance app allows users to consolidate their investments into one port
 
 **Required Must-have Stories**
 
-* Users can sign up for a new account
-* Users can log in
-* User can add individual investments
-* User can delete individual investments
-* User can see more information about a specific company
-* User can add/delete an investment to a watchlist
+- [x] Users can sign up for a new account
+- [x] Users can log in
+- [x] User can add individual investments
+- [x] User can delete individual investments
+- [ ] User can edit an individual investment
+- [x] User can see more information about a specific company
+- [ ] User can add/delete an investment to a watchlist
+- [ ] User can see the total value of their portfolio
 
 **Optional Nice-to-have Stories**
 
-* Users can chat with other users about their investments
-* Users can see daily/weekly/monthly trends about their portfolio
+- [ ] Users can chat with other users about their investments
+- [ ] Users can see daily/weekly/monthly trends about their portfolio
+- [ ] Show suggested tickers when user is typing in a ticker to add (autocomplete)
 
 
 ### 2. Screen Archetypes
