@@ -37,6 +37,8 @@ class PortfolioViewController: UITableViewController  {
     var investments = [PFObject]()
     
     
+    
+    
 //    var companies = ["AAPL", "DIS", "BBY", "Z", "CMG"]
     
     
@@ -112,12 +114,15 @@ class PortfolioViewController: UITableViewController  {
         return investments.count
     }
 
+
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PortfolioViewCell") as! PortfolioViewCell
-        
+        var liveResults = [String:Any]()
         let investment = self.investments[indexPath.row]
         cell.investment = investment
+        
+
         
 //        let url = URL(string:"https://api.polygon.io/v3/reference/tickers/" + companies[indexPath.row] + "?apiKey=" + self.pgonk1 + self.pgonk2)!
         let url = URL(string:"https://api.polygon.io/v3/reference/tickers/" + (investment["ticker"] as! String) + "?apiKey=" + self.pgonk1 + self.pgonk2)!
@@ -136,51 +141,39 @@ class PortfolioViewController: UITableViewController  {
                  cell.data = data
                  
                  cell.companyName.text = resultsDict?.results.name
+                 
+                 
+                 // Second API call to get 15 minute delayed price
 
-
-                 
-                 
-                 // Format date as Month Day, Year
-                 if let dateString = resultsDict?.results.list_date {
-                     let dateParser = DateFormatter()
-                     dateParser.dateFormat = "yyyy-MM-dd"
-                     
-                     let datePrint = DateFormatter()
-                     datePrint.dateFormat = "MMM dd, yyyy"
-                     
-                     let formattedDate: NSDate? = dateParser.date(from: dateString) as NSDate?
-
-                     
+                 var liveResults = [String:Any]()
+                 let url = URL(string:"https://api.polygon.io/v2/last/nbbo/" + (investment["ticker"] as! String) + "?apiKey=" + self.pgonk1 + self.pgonk2)!
+                 let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+                 let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+                 let task = session.dataTask(with: request) { (data, response, error) in
+                      // This will run when the network request returns
+                      if let error = error {
+                             print(error.localizedDescription)
+                      } else if let data = data {
+                          // Get array of movies
+                          let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                         
+                          // Store movies in property
+                          liveResults = dataDictionary["results"] as! [String:Any]
+                          
+                          let sharePrice = (liveResults["P"] as! NSNumber).doubleValue
+                          let numShares = Double(investment["numShares"] as! String) ?? 0
+                          let totalValue = sharePrice * numShares
+                          
+                          cell.companyPrice.text = sharePrice.currencyWithSeparator
+                          cell.currValue.text = totalValue.currencyWithSeparator
+                          
+                          self.total += totalValue
+                          self.title = String("Portfolio: " + self.total.currencyWithSeparator)
+                      }
                  }
+                 task.resume()
                  
-                 // Display number of employees with commas
-                 if let numEmployees = resultsDict?.results.total_employees {
-                     let commaFormat = NumberFormatter()
-                     commaFormat.numberStyle = .decimal
-                     //self.companyEmployees.text = commaFormat.string(from: NSNumber(value: numEmployees))
-                 }
-                 
-                 // Display number of shares in millions/trillions
-                 if let numShares = resultsDict?.results.share_class_shares_outstanding {
-                 }
-                 
-                 // Display market cap with 2 decimal places and in millions/trillions/billions
-                 if let mktCap = resultsDict?.results.market_cap {
-                     var sharePrice:Double = ((resultsDict?.results.market_cap)!/Double((resultsDict?.results.share_class_shares_outstanding)!))
-                     let numShares = Double(investment["numShares"] as! String) ?? 0
-                     let totalValue = sharePrice * numShares
-                     
-                     
-                     
-                     cell.companyPrice.text = sharePrice.currencyWithSeparator
-                     cell.currValue.text = totalValue.currencyWithSeparator
-                     
-                     self.total += totalValue
-                     self.title = String("Portfolio: " + self.total.currencyWithSeparator)
-                     //self.companyMktCap.text = mktCap.roundedWithCurrAbbrev
-                 }
-                 
-                 
+                 // Clear icon image
                  cell.companyIcon.image = nil
                  
                  // Parse out icon url, then create request with bearer authorization token and set image with AF
@@ -189,9 +182,6 @@ class PortfolioViewController: UITableViewController  {
                      var iconRequest = URLRequest(url: URL(string: icon_url)!)
                      iconRequest.addValue("Bearer " + "iOuM5gLKJ37tjoCXjIW6elzWLRdbCsZw", forHTTPHeaderField: "Authorization")
                      cell.companyIcon.af.setImage(withURLRequest: iconRequest)
-                     
-
-                     //self.companyLogo.af.setImage(withURLRequest: iconRequest)
                  }
 
              }
@@ -202,20 +192,19 @@ class PortfolioViewController: UITableViewController  {
         cell.qtyHeld.text = investment["numShares"] as! String
         cell.brokerageName.text = investment["brokerage"] as! String
 
-        cell.editButton.addTarget(self, action: #selector(testAction), for: .touchUpInside)
+        cell.editButton.addTarget(self, action: #selector(pressEditButton), for: .touchUpInside)
         cell.editButton.tag = indexPath.row
         return cell
     }
     
-    @objc func testAction(sender: UIButton) {
+    
+    
+    @objc func pressEditButton(sender: UIButton) {
         print(sender.tag)
         performSegue(withIdentifier: "editSegue", sender: sender)
     }
     
-    @objc
-    func didPressLabel (_ sender:UITapGestureRecognizer) {
-        print("Label tapped!")
-    }
+    
     
 
 
@@ -276,6 +265,7 @@ class PortfolioViewController: UITableViewController  {
             DetailsViewController.data = cell.data
         }
         
+        // Need to pass the specific investment object to editing
         if segue.identifier == "editSegue" {
             let button = sender as! UIButton
             let selectedInvestment = investments[button.tag]

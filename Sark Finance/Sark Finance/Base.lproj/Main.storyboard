@@ -282,7 +282,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJe-Gc-RAi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4251" y="-19"/>
+            <point key="canvasLocation" x="4251" y="181"/>
         </scene>
         <!--Wishlist-->
         <scene sceneID="UoG-2c-Atv">
@@ -299,7 +299,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfA-aK-krm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3604" y="-19"/>
+            <point key="canvasLocation" x="3607" y="181"/>
         </scene>
         <!--Add Investment-->
         <scene sceneID="bYh-Tk-jDf">
@@ -784,7 +784,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2X-lr-qd8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4979.7101449275369" y="-399.10714285714283"/>
+            <point key="canvasLocation" x="5125" y="-332"/>
         </scene>
         <!--Portfolio-->
         <scene sceneID="qtZ-YC-LOM">
