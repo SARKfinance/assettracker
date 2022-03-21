@@ -42,6 +42,7 @@ class PortfolioViewController: UITableViewController  {
     
     let pgonk1 = "iOuM5gLKJ37tjo"
     let pgonk2 = "CXjIW6elzWLRdbCsZw"
+    var total: Double = 0
     
     
     @IBAction func signOut(_ sender: Any) {
@@ -59,6 +60,7 @@ class PortfolioViewController: UITableViewController  {
         NotificationCenter.default.addObserver(forName: Notification.Name("refresh"), object: nil, queue: OperationQueue.main) {(Notification) in
             print("Notification received!")
             self.loadInvestments()
+            
             
         }
     }
@@ -83,8 +85,8 @@ class PortfolioViewController: UITableViewController  {
                 
             }
         }
-        
     }
+    
         
         
         
@@ -180,8 +182,14 @@ class PortfolioViewController: UITableViewController  {
                      var sharePrice:Double = ((resultsDict?.results.market_cap)!/Double((resultsDict?.results.share_class_shares_outstanding)!))
                      let numShares = Double(investment["numShares"] as! String) ?? 0
                      let totalValue = sharePrice * numShares
-                     cell.companyPrice.text = String(format: "$%.2f", sharePrice)
-                     cell.currValue.text = String(format: "$%.2f", totalValue)
+                     
+                     
+                     
+                     cell.companyPrice.text = sharePrice.currencyWithSeparator
+                     cell.currValue.text = totalValue.currencyWithSeparator
+                     
+                     self.total += totalValue
+                     self.title = String("Portfolio: " + self.total.currencyWithSeparator)
                      //self.companyMktCap.text = mktCap.roundedWithCurrAbbrev
                  }
                  
@@ -207,6 +215,7 @@ class PortfolioViewController: UITableViewController  {
         cell.qtyHeld.text = investment["numShares"] as! String
         cell.brokerageName.text = investment["brokerage"] as! String
 
+        
         return cell
     }
     
