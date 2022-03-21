@@ -41,10 +41,13 @@ class EditViewController: UIViewController, UITextFieldDelegate {
         return isNumber || withDecimal
     }
     
+    // Function called when submit button is pressed. Updates investment object parameters in the database
     @IBAction func onSubmit(_ sender: Any) {
         investment["ticker"] = tickerField.text
         investment["numShares"] = numSharesField.text
         investment["brokerage"] = brokerageField.text
+        
+        // Use blocking save function, then notify table view to refresh
         do {
             try investment.save()
         }
@@ -52,9 +55,11 @@ class EditViewController: UIViewController, UITextFieldDelegate {
             print("Failed to save investment!")
         }
         NotificationCenter.default.post(name: NSNotification.Name("refresh"), object: nil)
+        // Dismiss after investment object is updated
         self.dismiss(animated: true, completion: nil)
     }
     
+    // Function called when cancel button is pressed. Dismisses current view
     @IBAction func onCancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

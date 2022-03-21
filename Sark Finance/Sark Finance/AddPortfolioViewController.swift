@@ -31,6 +31,7 @@ class AddPortfolioViewController: UIViewController, UITextFieldDelegate {
         return isNumber || withDecimal
     }
     
+    // Function called when submit button is pressed. Saves new investment object
     @IBAction func onSubmit(_ sender: Any) {
         let investment = PFObject(className:"investments")
         investment["ticker"] = self.tickerName.text
@@ -40,6 +41,7 @@ class AddPortfolioViewController: UIViewController, UITextFieldDelegate {
         
         investment.saveInBackground { (success, error) in
             if success {
+                // Print success message to console and go back to previous view controller
                 print("Investment saved")
                 self.navigationController?.popViewController(animated: false)
             }
@@ -49,6 +51,7 @@ class AddPortfolioViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    // Called when cancel button is pressed. Dismisses current view
     @IBAction func onCancel(_ sender: Any) {
         self.navigationController?.popViewController(animated: false)
     }

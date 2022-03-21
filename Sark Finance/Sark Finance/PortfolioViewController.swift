@@ -8,6 +8,8 @@
 import UIKit
 import Parse
 
+
+// Set up decodable struct for parsing API response
 struct Root: Decodable {
     let results: Results
 }
@@ -30,38 +32,26 @@ struct Branding: Decodable {
 }
 
 
-
-
 class PortfolioViewController: UITableViewController  {
-    var companies = [String]()
+    // Set up Array of PFObjects to hold results from API call
     var investments = [PFObject]()
     
-    
-    
-    
-//    var companies = ["AAPL", "DIS", "BBY", "Z", "CMG"]
-    
-    
+    // Slightly obfuscated API key
     let pgonk1 = "iOuM5gLKJ37tjo"
     let pgonk2 = "CXjIW6elzWLRdbCsZw"
+    // Variable to keep track of total portfolio valuex
     var total: Double = 0
     
     
-    @IBAction func signOut(_ sender: Any) {
-        PFUser.logOut()
-        
-        let main = UIStoryboard(name:"Main", bundle:nil)
-        let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
-        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate else {return}
-        
-        delegate.window?.rootViewController = loginViewController
-        
-    }
+    // Function for initial view load
     override func viewDidLoad() {
+        // Add notification center listener for table refresh
         super.viewDidLoad()
         NotificationCenter.default.addObserver(forName: Notification.Name("refresh"), object: nil, queue: OperationQueue.main) {(Notification) in
             print("Notification received!")
+            // Set total value of portfolio to zero
             self.total = 0
+            // Call function to load investments from database
             self.loadInvestments()
             
             
@@ -70,20 +60,26 @@ class PortfolioViewController: UITableViewController  {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        // Set total value of portfolio to zero
         self.total = 0
+        // Call function to load investments from database
         loadInvestments()
     }
     
     func loadInvestments() {
+        // Initialize array of investments
         self.investments = []
+        // Reload table data to clear
         self.tableView.reloadData()
         
+        // Query database for investments where the owner matches the user
         let user = PFUser.current()
         let query = PFQuery(className: "investments")
         query.whereKey("owner", equalTo: user)
         
         query.findObjectsInBackground { (investments, error) in
             if investments != nil {
+                // Save results into property and reload the data
                 self.investments = investments!
                 self.tableView.reloadData()
                 
@@ -109,6 +105,7 @@ class PortfolioViewController: UITableViewController  {
 //        return 0
 //    }
 
+    // Should have the same number of rows as the number of investments returned by the database call
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return investments.count
@@ -117,14 +114,14 @@ class PortfolioViewController: UITableViewController  {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Create reusable cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "PortfolioViewCell") as! PortfolioViewCell
-        var liveResults = [String:Any]()
+        
+        // Set the investment for this cell and save it as a property
         let investment = self.investments[indexPath.row]
         cell.investment = investment
         
-
-        
-//        let url = URL(string:"https://api.polygon.io/v3/reference/tickers/" + companies[indexPath.row] + "?apiKey=" + self.pgonk1 + self.pgonk2)!
+        // Set up for API call to get stock data (primarily for the company name and the icon)
         let url = URL(string:"https://api.polygon.io/v3/reference/tickers/" + (investment["ticker"] as! String) + "?apiKey=" + self.pgonk1 + self.pgonk2)!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
@@ -143,9 +140,10 @@ class PortfolioViewController: UITableViewController  {
                  cell.companyName.text = resultsDict?.results.name
                  
                  
-                 // Second API call to get 15 minute delayed price
-
+                 // Second nested API call to get 15 minute delayed price
+                 // Initialize Array of dictionaries to hold the results from second API call (for 15 minute delayed price)
                  var liveResults = [String:Any]()
+                 // Set up second API call
                  let url = URL(string:"https://api.polygon.io/v2/last/nbbo/" + (investment["ticker"] as! String) + "?apiKey=" + self.pgonk1 + self.pgonk2)!
                  let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
                  let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
@@ -160,13 +158,16 @@ class PortfolioViewController: UITableViewController  {
                           // Store movies in property
                           liveResults = dataDictionary["results"] as! [String:Any]
                           
+                          // Get share price value and calculate total value
                           let sharePrice = (liveResults["P"] as! NSNumber).doubleValue
                           let numShares = Double(investment["numShares"] as! String) ?? 0
                           let totalValue = sharePrice * numShares
                           
+                          // Update label text
                           cell.companyPrice.text = sharePrice.currencyWithSeparator
                           cell.currValue.text = totalValue.currencyWithSeparator
                           
+                          // Update the total value in the view controller title
                           self.total += totalValue
                           self.title = String("Portfolio: " + self.total.currencyWithSeparator)
                       }
@@ -178,7 +179,6 @@ class PortfolioViewController: UITableViewController  {
                  
                  // Parse out icon url, then create request with bearer authorization token and set image with AF
                  if let icon_url = resultsDict?.results.branding.icon_url {
-                     
                      var iconRequest = URLRequest(url: URL(string: icon_url)!)
                      iconRequest.addValue("Bearer " + "iOuM5gLKJ37tjoCXjIW6elzWLRdbCsZw", forHTTPHeaderField: "Authorization")
                      cell.companyIcon.af.setImage(withURLRequest: iconRequest)
@@ -188,22 +188,35 @@ class PortfolioViewController: UITableViewController  {
         }
         task.resume()
         
+        // Set ticker, qty, brokerage name labels
         cell.companyTicker.text = investment["ticker"] as! String
         cell.qtyHeld.text = investment["numShares"] as! String
         cell.brokerageName.text = investment["brokerage"] as! String
 
+        // Set up action for the edit button
         cell.editButton.addTarget(self, action: #selector(pressEditButton), for: .touchUpInside)
+        // Add tag to edit button to specify in which cell the edit button was pressed
         cell.editButton.tag = indexPath.row
         return cell
     }
     
     
-    
+    // Function called when edit button is pressed -> performs segue to edit screen
     @objc func pressEditButton(sender: UIButton) {
-        print(sender.tag)
         performSegue(withIdentifier: "editSegue", sender: sender)
     }
     
+    // Function for signing out via the navigation bar button
+    @IBAction func signOut(_ sender: Any) {
+        PFUser.logOut()
+        
+        let main = UIStoryboard(name:"Main", bundle:nil)
+        let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate else {return}
+        
+        delegate.window?.rootViewController = loginViewController
+        
+    }
     
     
 

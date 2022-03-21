@@ -19,9 +19,9 @@ class PortfolioViewCell: UITableViewCell {
     @IBOutlet weak var brokerageName: UILabel!
     @IBOutlet weak var editButton: UIButton!
     
-    // Used to cache data from initial API call - passed to DetailsViewController on segue
+    // Used to cache data from initial API call for stock details - passed to DetailsViewController on segue
     var data: Data? = nil
-    // Each cell saves the investment object that it is assigned to (to have a reference for deleting and updating)
+    // Each cell saves the investment object that it is assigned to as a property (to have a reference for deleting and updating)
     var investment = PFObject(className: "investments")
     
     override func awakeFromNib() {

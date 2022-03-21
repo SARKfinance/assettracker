@@ -23,13 +23,13 @@ class SignUpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // Function called when cancel button is pressed - dismiss current view to return to login
     @IBAction func onCancel(_ sender: Any) {
-        //testing code
         self.dismiss(animated: true, completion: nil)
     }
     
+    // Function called on sign up - creates new user and saves to database
     @IBAction func onSignUp(_ sender: Any) {
-        //testing code
         let user = PFUser();
         user.username = usernameField.text
         user.password = passwordField.text
@@ -38,6 +38,7 @@ class SignUpViewController: UIViewController {
         user["email"] = emailField.text
         
         user.signUpInBackground { (success, error) in
+            // If sign up is successful, segue to the main screen
             if success {
                 self.performSegue(withIdentifier: "signUpCompleteSegue", sender: nil)
             }
