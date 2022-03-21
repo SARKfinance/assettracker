@@ -28,6 +28,7 @@
 		EC6CB44927E65C50002503A8 /* Double+Currency+Abbrev.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB44827E65C50002503A8 /* Double+Currency+Abbrev.swift */; };
 		EC6CB44B27E78986002503A8 /* AddPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB44A27E78986002503A8 /* AddPortfolioViewController.swift */; };
 		EC6CB44D27E896B0002503A8 /* Double+FormatCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB44C27E896B0002503A8 /* Double+FormatCurrency.swift */; };
+		EC6CB44F27E89B01002503A8 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB44E27E89B01002503A8 /* EditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		EC6CB44827E65C50002503A8 /* Double+Currency+Abbrev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Currency+Abbrev.swift"; sourceTree = "<group>"; };
 		EC6CB44A27E78986002503A8 /* AddPortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPortfolioViewController.swift; sourceTree = "<group>"; };
 		EC6CB44C27E896B0002503A8 /* Double+FormatCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+FormatCurrency.swift"; sourceTree = "<group>"; };
+		EC6CB44E27E89B01002503A8 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				EC6CB44127E58B0E002503A8 /* DetailsViewController.swift */,
 				EC6CB44327E63BA8002503A8 /* PortfolioViewCell.swift */,
 				EC6CB44A27E78986002503A8 /* AddPortfolioViewController.swift */,
+				EC6CB44E27E89B01002503A8 /* EditViewController.swift */,
 			);
 			path = "Sark Finance";
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC6CB44F27E89B01002503A8 /* EditViewController.swift in Sources */,
 				EC6CB44D27E896B0002503A8 /* Double+FormatCurrency.swift in Sources */,
 				EC65241C27E17D9F0072DD3B /* ViewController.swift in Sources */,
 				EC6CB44027E53E4A002503A8 /* PortfolioViewController.swift in Sources */,

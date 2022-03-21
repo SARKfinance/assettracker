@@ -136,21 +136,8 @@ class PortfolioViewController: UITableViewController  {
                  cell.data = data
                  
                  cell.companyName.text = resultsDict?.results.name
-                 
-                 let tap = UITapGestureRecognizer(target:self, action: #selector(self.didPressLabel))
-                 cell.companyName.addGestureRecognizer(tap)
-                 
-                 
-                 
-                // Set company name and details
-//                 self.companyName.text = resultsDict?.results.name
-//                 self.companyDetails.text = resultsDict?.results.description
-//                 
-//                 self.companyTicker.text = resultsDict?.results.ticker_root
-                 
-                 
 
-                 //self.companySharePrice.text = String(format: "$%.2f", sharePrice)
+
                  
                  
                  // Format date as Month Day, Year
@@ -162,8 +149,7 @@ class PortfolioViewController: UITableViewController  {
                      datePrint.dateFormat = "MMM dd, yyyy"
                      
                      let formattedDate: NSDate? = dateParser.date(from: dateString) as NSDate?
-                     
-                     //self.companyDate.text = datePrint.string(from: formattedDate! as Date)
+
                      
                  }
                  
@@ -176,7 +162,6 @@ class PortfolioViewController: UITableViewController  {
                  
                  // Display number of shares in millions/trillions
                  if let numShares = resultsDict?.results.share_class_shares_outstanding {
-                     //self.companyShares.text = numShares.roundedWithAbbrev
                  }
                  
                  // Display market cap with 2 decimal places and in millions/trillions/billions
@@ -217,15 +202,25 @@ class PortfolioViewController: UITableViewController  {
         cell.qtyHeld.text = investment["numShares"] as! String
         cell.brokerageName.text = investment["brokerage"] as! String
 
-        
+        cell.editButton.addTarget(self, action: #selector(testAction), for: .touchUpInside)
+        cell.editButton.tag = indexPath.row
         return cell
+    }
+    
+    @objc func testAction(sender: UIButton) {
+        print(sender.tag)
+        performSegue(withIdentifier: "editSegue", sender: sender)
     }
     
     @objc
     func didPressLabel (_ sender:UITapGestureRecognizer) {
         print("Label tapped!")
-//        performSegue(withIdentifier: "detailsSegue", sender: PortfolioViewCell.self)
     }
+    
+
+
+    
+
     
 
     /*
@@ -280,6 +275,14 @@ class PortfolioViewController: UITableViewController  {
             // Pass raw data to details view from cell
             DetailsViewController.data = cell.data
         }
+        
+        if segue.identifier == "editSegue" {
+            let button = sender as! UIButton
+            let selectedInvestment = investments[button.tag]
+            let EditViewController = segue.destination as! EditViewController
+            EditViewController.investment = selectedInvestment
+        }
+        
 
 
         
