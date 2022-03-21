@@ -38,7 +38,12 @@ class PortfolioViewCell: UITableViewCell {
     }
 
     @IBAction func deleteInvestment(_ sender: Any) {
-        investment.deleteInBackground()
+        do {
+            try investment.delete()
+        }
+        catch {
+            
+        }
         NotificationCenter.default.post(name: NSNotification.Name("refresh"), object: nil)
         print("Deleting investment!")
     }

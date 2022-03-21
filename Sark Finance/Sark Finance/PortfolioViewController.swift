@@ -59,6 +59,7 @@ class PortfolioViewController: UITableViewController  {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(forName: Notification.Name("refresh"), object: nil, queue: OperationQueue.main) {(Notification) in
             print("Notification received!")
+            self.total = 0
             self.loadInvestments()
             
             
@@ -67,6 +68,7 @@ class PortfolioViewController: UITableViewController  {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.total = 0
         loadInvestments()
     }
     
