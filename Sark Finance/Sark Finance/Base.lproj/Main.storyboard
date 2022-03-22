@@ -284,6 +284,52 @@
             </objects>
             <point key="canvasLocation" x="4251" y="181"/>
         </scene>
+        <!--Chat-->
+        <scene sceneID="eig-9K-ykq">
+            <objects>
+                <tableViewController id="AzS-it-OC7" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="bOI-Iq-Iag">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Hau-sv-IqJ">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hau-sv-IqJ" id="Z7h-Zz-5yq">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="AzS-it-OC7" id="klf-la-McM"/>
+                            <outlet property="delegate" destination="AzS-it-OC7" id="eGC-c9-VOP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Chat" id="eDJ-Ou-E9l"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BbS-Kb-ZO3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4130" y="927"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="TsY-4P-aNz">
+            <objects>
+                <navigationController id="Ls1-0O-5Yc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chat" image="message.fill" catalog="system" id="3v4-mS-Di1"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6jl-Qa-0Cg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AzS-it-OC7" kind="relationship" relationship="rootViewController" id="vHs-Ls-VG8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37S-Pk-rBy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3267" y="927"/>
+        </scene>
         <!--Wishlist-->
         <scene sceneID="UoG-2c-Atv">
             <objects>
@@ -816,6 +862,7 @@
                     <connections>
                         <segue destination="QdP-6F-ywb" kind="relationship" relationship="viewControllers" id="7IS-s5-DAh"/>
                         <segue destination="dgd-rs-Bli" kind="relationship" relationship="viewControllers" id="AAd-Lk-L9n"/>
+                        <segue destination="Ls1-0O-5Yc" kind="relationship" relationship="viewControllers" id="1Wy-A2-Lu5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3I-eA-L4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -829,6 +876,7 @@
     <resources>
         <image name="SFlogo" width="320" height="240"/>
         <image name="dollarsign.square" catalog="system" width="128" height="114"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="plus.app.fill" catalog="system" width="128" height="114"/>
         <image name="signuplabel" width="294" height="78"/>
         <image name="smiley" catalog="system" width="128" height="121"/>
