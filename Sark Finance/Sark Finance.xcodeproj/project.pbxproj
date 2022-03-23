@@ -10,6 +10,8 @@
 		4A308874028C709CCCAA29C1 /* Pods_Sark_Finance_Sark_FinanceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1129DBB28F4B8C6A1D3A68C /* Pods_Sark_Finance_Sark_FinanceUITests.framework */; };
 		5EB85C7627E397C300A78AB3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB85C7527E397C300A78AB3 /* SignUpViewController.swift */; };
 		71F7619D5C6B07A4677FE461 /* Pods_Sark_Finance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047DB324839C828C61A4678B /* Pods_Sark_Finance.framework */; };
+		931B93E127EAE385008ED83A /* chatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931B93E027EAE385008ED83A /* chatCell.swift */; };
+		931B93E327EAE519008ED83A /* chatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931B93E227EAE519008ED83A /* chatTableViewController.swift */; };
 		93E138F827E44237007609C3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E138F727E44237007609C3 /* LoginViewController.swift */; };
 		B20F373C9E160F4210D3BB66 /* Pods_Sark_FinanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D05B7EF8B5CDA6B8019E255 /* Pods_Sark_FinanceTests.framework */; };
 		EC65241827E17D9F0072DD3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65241727E17D9F0072DD3B /* AppDelegate.swift */; };
@@ -55,6 +57,8 @@
 		5C8E5F15D63747AD69AB096E /* Pods-Sark Finance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sark Finance.debug.xcconfig"; path = "Target Support Files/Pods-Sark Finance/Pods-Sark Finance.debug.xcconfig"; sourceTree = "<group>"; };
 		5EB85C7527E397C300A78AB3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6D05B7EF8B5CDA6B8019E255 /* Pods_Sark_FinanceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sark_FinanceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		931B93E027EAE385008ED83A /* chatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatCell.swift; sourceTree = "<group>"; };
+		931B93E227EAE519008ED83A /* chatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatTableViewController.swift; sourceTree = "<group>"; };
 		93E138F727E44237007609C3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9CDD25BA16592DA4F9504C7D /* Pods-Sark FinanceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sark FinanceTests.release.xcconfig"; path = "Target Support Files/Pods-Sark FinanceTests/Pods-Sark FinanceTests.release.xcconfig"; sourceTree = "<group>"; };
 		D1129DBB28F4B8C6A1D3A68C /* Pods_Sark_Finance_Sark_FinanceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sark_Finance_Sark_FinanceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +168,8 @@
 				EC65241927E17D9F0072DD3B /* SceneDelegate.swift */,
 				EC65241B27E17D9F0072DD3B /* ViewController.swift */,
 				93E138F727E44237007609C3 /* LoginViewController.swift */,
+				931B93E227EAE519008ED83A /* chatTableViewController.swift */,
+				931B93E027EAE385008ED83A /* chatCell.swift */,
 				EC65241D27E17D9F0072DD3B /* Main.storyboard */,
 				EC65242027E17DA10072DD3B /* Assets.xcassets */,
 				EC65242227E17DA10072DD3B /* LaunchScreen.storyboard */,
@@ -449,10 +455,12 @@
 				EC65241C27E17D9F0072DD3B /* ViewController.swift in Sources */,
 				EC6CB44027E53E4A002503A8 /* PortfolioViewController.swift in Sources */,
 				EC65241827E17D9F0072DD3B /* AppDelegate.swift in Sources */,
+				931B93E127EAE385008ED83A /* chatCell.swift in Sources */,
 				EC6CB44B27E78986002503A8 /* AddPortfolioViewController.swift in Sources */,
 				EC6CB44927E65C50002503A8 /* Double+Currency+Abbrev.swift in Sources */,
 				EC6CB44427E63BA9002503A8 /* PortfolioViewCell.swift in Sources */,
 				5EB85C7627E397C300A78AB3 /* SignUpViewController.swift in Sources */,
+				931B93E327EAE519008ED83A /* chatTableViewController.swift in Sources */,
 				EC6CB44227E58B0E002503A8 /* DetailsViewController.swift in Sources */,
 				93E138F827E44237007609C3 /* LoginViewController.swift in Sources */,
 				EC65241A27E17D9F0072DD3B /* SceneDelegate.swift in Sources */,

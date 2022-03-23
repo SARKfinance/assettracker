@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LBC-3v-wSQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LBC-3v-wSQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -287,18 +287,38 @@
         <!--Chat-->
         <scene sceneID="eig-9K-ykq">
             <objects>
-                <tableViewController id="AzS-it-OC7" sceneMemberID="viewController">
+                <tableViewController id="AzS-it-OC7" customClass="chatTableViewController" customModule="Sark_Finance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="bOI-Iq-Iag">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <textField key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tyoe something here.." textAlignment="natural" minimumFontSize="17" id="bt4-63-O7H" userLabel="chatMessageField">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Hau-sv-IqJ">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="78.5" width="414" height="19"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hau-sv-IqJ" id="Z7h-Zz-5yq">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="19"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="chatCell" text="How are your stocks?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cc1-v8-BEX">
+                                            <rect key="frame" x="20" y="5" width="374" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Cc1-v8-BEX" firstAttribute="top" secondItem="Z7h-Zz-5yq" secondAttribute="topMargin" constant="-6" id="4Wo-WB-BTL"/>
+                                        <constraint firstItem="Cc1-v8-BEX" firstAttribute="trailing" secondItem="Z7h-Zz-5yq" secondAttribute="trailingMargin" id="aSP-b8-yqC"/>
+                                        <constraint firstItem="Cc1-v8-BEX" firstAttribute="leading" secondItem="Z7h-Zz-5yq" secondAttribute="leadingMargin" id="bCD-Sf-YLg"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Cc1-v8-BEX" secondAttribute="bottom" constant="-18" id="tzp-FE-rtK"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -307,16 +327,31 @@
                             <outlet property="delegate" destination="AzS-it-OC7" id="eGC-c9-VOP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Chat" id="eDJ-Ou-E9l"/>
+                    <navigationItem key="navigationItem" title="Chat" id="eDJ-Ou-E9l">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="DbJ-fr-AnJ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="wyP-gi-EDX">
+                                <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Send"/>
+                                <connections>
+                                    <action selector="onSend:" destination="AzS-it-OC7" eventType="touchUpInside" id="Si2-OA-UtN"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="chatMessageField" destination="bt4-63-O7H" id="cJO-xJ-hbO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BbS-Kb-ZO3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4130" y="927"/>
+            <point key="canvasLocation" x="4128.985507246377" y="926.78571428571422"/>
         </scene>
         <!--Chat-->
         <scene sceneID="TsY-4P-aNz">
             <objects>
-                <navigationController id="Ls1-0O-5Yc" sceneMemberID="viewController">
+                <navigationController id="Ls1-0O-5Yc" customClass="chat" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Chat" image="message.fill" catalog="system" id="3v4-mS-Di1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6jl-Qa-0Cg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -604,26 +639,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMPANY NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A40-9k-wYE">
-                                <rect key="frame" x="10" y="10" width="369" height="33"/>
+                                <rect key="frame" x="10" y="54" width="369" height="33"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="company details" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYX-Hq-01t">
-                                <rect key="frame" x="10" y="238" width="394" height="20.5"/>
+                                <rect key="frame" x="10" y="282" width="394" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gtc-eh-K86">
-                                <rect key="frame" x="10" y="53" width="100" height="100"/>
+                                <rect key="frame" x="10" y="97" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="NsJ-zl-Eg6"/>
                                     <constraint firstAttribute="height" constant="100" id="zc6-1O-90E"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TICKER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhv-cb-em7">
-                                <rect key="frame" x="10" y="163" width="100" height="21"/>
+                                <rect key="frame" x="10" y="207" width="100" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="ymg-az-etG"/>
                                 </constraints>
@@ -632,7 +667,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Summary:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cih-gF-QV8">
-                                <rect key="frame" x="10" y="204" width="394" height="24"/>
+                                <rect key="frame" x="10" y="248" width="394" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
