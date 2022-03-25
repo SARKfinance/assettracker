@@ -27,7 +27,7 @@ The SARK Finance app allows users to consolidate their investments into one port
 
 ### 1. User Stories (Required and Optional)
 
-**Required Must-have Stories**
+**Required Must-have Stories (COMPLETED)**
 
 - [x] Users can sign up for a new account
 - [x] Users can log in
