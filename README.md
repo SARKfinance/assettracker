@@ -35,8 +35,8 @@ The SARK Finance app allows users to consolidate their investments into one port
 - [x] User can delete individual investments
 - [X] User can edit an individual investment
 - [x] User can see more information about a specific company
-- [ ] User can add/delete an investment to a watchlist
-- [X] User can see the total value of their portfolio
+- [x] User can add/delete an investment to a watchlist
+- [x] User can see the total value of their portfolio
 
 **Optional Nice-to-have Stories**
 
