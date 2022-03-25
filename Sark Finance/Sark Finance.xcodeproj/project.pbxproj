@@ -31,6 +31,8 @@
 		EC6CB44B27E78986002503A8 /* AddPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB44A27E78986002503A8 /* AddPortfolioViewController.swift */; };
 		EC6CB44D27E896B0002503A8 /* Double+FormatCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB44C27E896B0002503A8 /* Double+FormatCurrency.swift */; };
 		EC6CB44F27E89B01002503A8 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB44E27E89B01002503A8 /* EditViewController.swift */; };
+		EC6CB45327ED46AC002503A8 /* WatchlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB45227ED46AC002503A8 /* WatchlistTableViewController.swift */; };
+		EC6CB45527ED4ADE002503A8 /* WatchlistViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB45427ED4ADE002503A8 /* WatchlistViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		EC6CB44A27E78986002503A8 /* AddPortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPortfolioViewController.swift; sourceTree = "<group>"; };
 		EC6CB44C27E896B0002503A8 /* Double+FormatCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+FormatCurrency.swift"; sourceTree = "<group>"; };
 		EC6CB44E27E89B01002503A8 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		EC6CB45227ED46AC002503A8 /* WatchlistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistTableViewController.swift; sourceTree = "<group>"; };
+		EC6CB45427ED4ADE002503A8 /* WatchlistViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,8 @@
 				EC6CB44327E63BA8002503A8 /* PortfolioViewCell.swift */,
 				EC6CB44A27E78986002503A8 /* AddPortfolioViewController.swift */,
 				EC6CB44E27E89B01002503A8 /* EditViewController.swift */,
+				EC6CB45227ED46AC002503A8 /* WatchlistTableViewController.swift */,
+				EC6CB45427ED4ADE002503A8 /* WatchlistViewCell.swift */,
 			);
 			path = "Sark Finance";
 			sourceTree = "<group>";
@@ -453,6 +459,7 @@
 				EC6CB44F27E89B01002503A8 /* EditViewController.swift in Sources */,
 				EC6CB44D27E896B0002503A8 /* Double+FormatCurrency.swift in Sources */,
 				EC65241C27E17D9F0072DD3B /* ViewController.swift in Sources */,
+				EC6CB45327ED46AC002503A8 /* WatchlistTableViewController.swift in Sources */,
 				EC6CB44027E53E4A002503A8 /* PortfolioViewController.swift in Sources */,
 				EC65241827E17D9F0072DD3B /* AppDelegate.swift in Sources */,
 				931B93E127EAE385008ED83A /* chatCell.swift in Sources */,
@@ -463,6 +470,7 @@
 				931B93E327EAE519008ED83A /* chatTableViewController.swift in Sources */,
 				EC6CB44227E58B0E002503A8 /* DetailsViewController.swift in Sources */,
 				93E138F827E44237007609C3 /* LoginViewController.swift in Sources */,
+				EC6CB45527ED4ADE002503A8 /* WatchlistViewCell.swift in Sources */,
 				EC65241A27E17D9F0072DD3B /* SceneDelegate.swift in Sources */,
 				EC6CB44727E65AD4002503A8 /* Integer+Abbreviations.swift in Sources */,
 			);

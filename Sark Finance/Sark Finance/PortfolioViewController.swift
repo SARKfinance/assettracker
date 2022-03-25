@@ -67,7 +67,7 @@ class PortfolioViewController: UITableViewController  {
     }
     
     func loadInvestments() {
-        // Initialize array of investments
+        // Initialize array of investments to empty
         self.investments = []
         // Reload table data to clear
         self.tableView.reloadData()
@@ -133,7 +133,6 @@ class PortfolioViewController: UITableViewController  {
                 
                  // Decode JSON dictionary with Decodable structs
                  let resultsDict = try? JSONDecoder().decode(Root.self, from: data)
-                 
                  // Save raw data to cell to pass to details if pressed
                  cell.data = data
                  
