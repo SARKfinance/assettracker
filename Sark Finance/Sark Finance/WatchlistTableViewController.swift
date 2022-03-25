@@ -25,21 +25,32 @@ struct LastTrade: Decodable {
 
 class WatchlistTableViewController: UITableViewController {
     
+    
     let pgonk1 = "iOuM5gLKJ37tjo"
     let pgonk2 = "CXjIW6elzWLRdbCsZw"
     
     var watchlist = [PFObject]()
     
-    let tickers = ["AAPL", "MSFT", "AMZN","GOOGL","DIS","NVDA", "AMD", "NKE"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(forName: Notification.Name("refreshWatch"), object: nil, queue: OperationQueue.main) {(Notification) in
+            print("Notification received!")
+            // Call function to load investments from database
+            self.loadWatchlist()
+            
+            
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadWatchlist()
     }
 
     // MARK: - Table view data source
@@ -51,10 +62,11 @@ class WatchlistTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return tickers.count
-//        return watchlist.count
+
+        return watchlist.count
     }
     
+    // Sends query to Parse database to get the list of companies in the watchlist
     func loadWatchlist() {
         // Initialize array of investments
         self.watchlist = []
@@ -74,14 +86,15 @@ class WatchlistTableViewController: UITableViewController {
                 
             }
         }
-//        let url = "https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/tickers/AAPL?apiKey=" + pgonk + pgonk2
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var quoteResults = [String:Any]()
         let cell = tableView.dequeueReusableCell(withIdentifier: "WatchlistViewCell", for: indexPath) as! WatchlistViewCell
-        let ticker = tickers[indexPath.row]
+        let watchCompany = self.watchlist[indexPath.row]
+        cell.watchCompany = watchCompany
+        let ticker = watchCompany["ticker"] as! String
         let url = URL(string:"https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/tickers/" + ticker + "?apiKey=" + self.pgonk1 + self.pgonk2)!
         print(url)
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
@@ -130,13 +143,7 @@ class WatchlistTableViewController: UITableViewController {
             
         }
         task.resume()
-            
-    
         cell.tickerName.text = ticker
-        
-        
-        
-        // Configure the cell...
 
         return cell
     }
@@ -151,6 +158,42 @@ class WatchlistTableViewController: UITableViewController {
         delegate.window?.rootViewController = loginViewController
     }
     
+    @IBAction func onAdd(_ sender: Any) {
+        let myalert = UIAlertController(title: "Add Stock to Watchlist", message: "Please enter a ticker:", preferredStyle: .alert)
+        myalert.addTextField { (textField) in
+            textField.text = ""
+        }
+        myalert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak myalert] (_) in
+            let textField = myalert?.textFields![0]
+            if (textField!.text!.count > 0) {
+                let watchlist = PFObject(className:"watchlist")
+                watchlist["ticker"] = textField?.text
+                watchlist["owner"] = PFUser.current()!
+                
+                watchlist.saveInBackground { (success, error) in
+                    if success {
+                        // Print success message to console and go back to previous view controller
+                        print("Watched company saved")
+                        NotificationCenter.default.post(name: NSNotification.Name("refreshWatch"), object: nil)
+                    }
+                    else {
+                        print("Error: \(error)")
+                    }
+                }
+            }
+            
+
+            
+        }))
+        let cancel = UIAlertAction(title: "Cancel", style: .default) { (alertAction) in }
+        myalert.addAction(cancel)
+        
+        self.present(myalert, animated:true, completion:nil)
+        
+    }
+    
+    
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

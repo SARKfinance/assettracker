@@ -296,6 +296,9 @@
                                             <buttonConfiguration key="configuration" style="plain">
                                                 <imageReference key="image" image="trash.fill" catalog="system" symbolScale="medium"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="onDelete:" destination="0jF-6K-PgP" eventType="touchUpInside" id="jaT-nG-2Zq"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1.70%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1a-iO-2nC">
                                             <rect key="frame" x="307" y="13" width="52.5" height="41"/>
@@ -341,7 +344,11 @@
                                 <action selector="onSignOut:" destination="FHJ-T7-Ah4" id="s77-2l-S8w"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus.app.fill" catalog="system" id="30T-1O-boU"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus.app.fill" catalog="system" id="30T-1O-boU">
+                            <connections>
+                                <action selector="onAdd:" destination="FHJ-T7-Ah4" id="0RR-8N-hjV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJe-Gc-RAi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

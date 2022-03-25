@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Parse
 
 class WatchlistViewCell: UITableViewCell {
+    
+    var watchCompany = PFObject(className:"watchlist")
 
     @IBOutlet weak var tickerName: UILabel!
     
@@ -27,5 +30,17 @@ class WatchlistViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
 
+    @IBAction func onDelete(_ sender: Any) {
+        do {
+            try watchCompany.delete()
+        }
+        catch {
+            print("Unable to delete watched company")
+        }
+        // Tell TableViewController to refresh the table data after deletion is complete
+        NotificationCenter.default.post(name: NSNotification.Name("refreshWatch"), object: nil)
+        print("Deleted watched company!")
+    }
 }
