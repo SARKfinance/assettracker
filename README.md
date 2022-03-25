@@ -53,6 +53,7 @@ The SARK Finance app allows users to consolidate their investments into one port
 <img src="https://github.com/SARKfinance/assettracker/blob/main/Sark%20Finance%20-%20Portfolio%20CRUD%20operations%20Demo.gif" height=350>
 
 **Watchlist Add/Delete and view details about a company with tap**
+
 <img src="https://github.com/SARKfinance/assettracker/blob/main/Sark%20Finance%20-%20Watchlist%20Demo.gif" height=350>
 
 ### 2. Screen Archetypes
