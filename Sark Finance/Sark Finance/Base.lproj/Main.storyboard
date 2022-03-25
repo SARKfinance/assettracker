@@ -330,6 +330,7 @@
                                     <outlet property="priceChange" destination="08K-c5-7QU" id="jYg-lc-mBa"/>
                                     <outlet property="tickerName" destination="vfz-FA-YJi" id="Sah-hF-PM3"/>
                                     <outlet property="tickerPrice" destination="adl-5Z-eLH" id="zkG-M7-PgK"/>
+                                    <segue destination="tYe-WK-uKm" kind="presentation" identifier="watchDetails" id="c6T-G3-jbg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -978,6 +979,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Q9l-AF-BUV"/>
+        <segue reference="c6T-G3-jbg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="SFlogo" width="320" height="240"/>

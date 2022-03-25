@@ -74,7 +74,7 @@ class PortfolioViewController: UITableViewController  {
         
         // Query database for investments where the owner matches the user
         let user = PFUser.current()
-        let query = PFQuery(className: "investments")
+        let query = PFQuery(className: "Investments")
         query.whereKey("owner", equalTo: user)
         
         query.findObjectsInBackground { (investments, error) in
@@ -119,7 +119,6 @@ class PortfolioViewController: UITableViewController  {
         
         // Set the investment for this cell and save it as a property
         let investment = self.investments[indexPath.row]
-        cell.investment = investment
         
         // Set up for API call to get stock data (primarily for the company name and the icon)
         let url = URL(string:"https://api.polygon.io/v3/reference/tickers/" + (investment["ticker"] as! String) + "?apiKey=" + self.pgonk1 + self.pgonk2)!
@@ -270,11 +269,9 @@ class PortfolioViewController: UITableViewController  {
             let cell = sender as! PortfolioViewCell
             let indexPath = tableView.indexPath(for: cell)!
             let ticker = investments[indexPath.row]["ticker"]
-            
+    
             let DetailsViewController = segue.destination as! DetailsViewController
             DetailsViewController.ticker = ticker as! String
-            // Pass raw data to details view from cell
-            DetailsViewController.data = cell.data
         }
         
         // Need to pass the specific investment object to editing

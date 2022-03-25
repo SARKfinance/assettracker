@@ -10,7 +10,7 @@ import Parse
 
 class WatchlistViewCell: UITableViewCell {
     
-    var watchCompany = PFObject(className:"watchlist")
+    var watchCompany = PFObject(className:"Watchlist")
 
     @IBOutlet weak var tickerName: UILabel!
     

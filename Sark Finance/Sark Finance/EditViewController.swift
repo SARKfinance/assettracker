@@ -13,7 +13,7 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     var ticker = ""
     var sharesHeld = ""
     var brokerage = ""
-    var investment = PFObject(className: "investments")
+    var investment = PFObject(className: "Investments")
     
     
     @IBOutlet weak var tickerField: UITextField!

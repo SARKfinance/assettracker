@@ -75,7 +75,7 @@ class WatchlistTableViewController: UITableViewController {
         
         // Query database for investments where the owner matches the user
         let user = PFUser.current()
-        let query = PFQuery(className: "watchlist")
+        let query = PFQuery(className: "Watchlist")
         query.whereKey("owner", equalTo: user)
         
         query.findObjectsInBackground { (watchlist, error) in
@@ -166,7 +166,7 @@ class WatchlistTableViewController: UITableViewController {
         myalert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak myalert] (_) in
             let textField = myalert?.textFields![0]
             if (textField!.text!.count > 0) {
-                let watchlist = PFObject(className:"watchlist")
+                let watchlist = PFObject(className:"Watchlist")
                 watchlist["ticker"] = textField?.text
                 watchlist["owner"] = PFUser.current()!
                 
@@ -229,14 +229,22 @@ class WatchlistTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "watchDetails" {
+            let cell = sender as! WatchlistViewCell
+            let ticker = cell.tickerName.text
+            
+            let DetailsViewController = segue.destination as! DetailsViewController
+            
+            DetailsViewController.ticker = ticker!
+        }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

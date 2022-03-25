@@ -22,7 +22,7 @@ class PortfolioViewCell: UITableViewCell {
     // Used to cache data from initial API call for stock details - passed to DetailsViewController on segue
     var data: Data? = nil
     // Each cell saves the investment object that it is assigned to as a property (to have a reference for deleting and updating)
-    var investment = PFObject(className: "investments")
+    var investment = PFObject(className: "Investments")
     
     override func awakeFromNib() {
         super.awakeFromNib()
