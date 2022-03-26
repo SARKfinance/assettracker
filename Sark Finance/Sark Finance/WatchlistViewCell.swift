@@ -31,7 +31,7 @@ class WatchlistViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-
+    // Delete the watchlist company saved for this cell
     @IBAction func onDelete(_ sender: Any) {
         do {
             try watchCompany.delete()

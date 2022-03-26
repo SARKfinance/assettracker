@@ -34,9 +34,10 @@ class WatchlistTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Set up listener for notification to refresh the watchlist
         NotificationCenter.default.addObserver(forName: Notification.Name("refreshWatch"), object: nil, queue: OperationQueue.main) {(Notification) in
             print("Notification received!")
-            // Call function to load investments from database
+            // Call function to load watchlist companies from database
             self.loadWatchlist()
             
             
@@ -48,6 +49,8 @@ class WatchlistTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    // Load companies from watchlist when view appears
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         loadWatchlist()
@@ -60,15 +63,14 @@ class WatchlistTableViewController: UITableViewController {
 //        return 0
 //    }
 
+    // Number of rows should be equal to the number of companies in the watchlist
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-
         return watchlist.count
     }
     
     // Sends query to Parse database to get the list of companies in the watchlist
     func loadWatchlist() {
-        // Initialize array of investments
+        // Initialize array of investments to empty
         self.watchlist = []
         // Reload table data to clear
         self.tableView.reloadData()
@@ -90,13 +92,15 @@ class WatchlistTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var quoteResults = [String:Any]()
+        // Initialize reusable cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "WatchlistViewCell", for: indexPath) as! WatchlistViewCell
+        // Get the object corresponding to an individual watchlist company and save as a property
         let watchCompany = self.watchlist[indexPath.row]
         cell.watchCompany = watchCompany
+        
+        // Set up API call to get stock quote information
         let ticker = watchCompany["ticker"] as! String
         let url = URL(string:"https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/tickers/" + ticker + "?apiKey=" + self.pgonk1 + self.pgonk2)!
-        print(url)
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
@@ -105,11 +109,12 @@ class WatchlistTableViewController: UITableViewController {
                     print(error.localizedDescription)
              } else if let data = data {
 
-                 // Get array of movies
+                 // Get the results of the quote and decode with pre-defined struct
                  let resultsDict = try? JSONDecoder().decode(TickerRoot.self, from: data)
                  if let lastTrade = resultsDict?.ticker.lastTrade.p {
                      cell.tickerPrice.text = "$" + String(format: "%.2f", lastTrade)
                  }
+                 // Format price change correctly (based on whether it is + or - or 0)
                  if let todaysChange = resultsDict?.ticker.todaysChange {
                      if todaysChange < 0 {
                          cell.priceChange.text = "-$" + String(format: "%.2f", abs(todaysChange))
@@ -124,6 +129,7 @@ class WatchlistTableViewController: UITableViewController {
                      }
 
                  }
+                 // Format percentage change correctly (based on whether it is + or - or 0)
                  if let percChange = resultsDict?.ticker.todaysChangePerc {
                      cell.percentChange.text = String(format: "%.2f", percChange)+"%"
                      if percChange < 0 {
@@ -142,6 +148,7 @@ class WatchlistTableViewController: UITableViewController {
              }
             
         }
+        // Execute API call task and set ticker name for cell
         task.resume()
         cell.tickerName.text = ticker
 
@@ -150,19 +157,21 @@ class WatchlistTableViewController: UITableViewController {
     
     @IBAction func onSignOut(_ sender: Any) {
         PFUser.logOut()
-        
+        // Show the initial log in screen after user logs out
         let main = UIStoryboard(name:"Main", bundle:nil)
         let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate else {return}
-        
         delegate.window?.rootViewController = loginViewController
     }
     
+    // Function for adding a new watchlist company after the add button is tapped
     @IBAction func onAdd(_ sender: Any) {
+        // Create new alert with textfield to enter a company ticker
         let myalert = UIAlertController(title: "Add Stock to Watchlist", message: "Please enter a ticker:", preferredStyle: .alert)
         myalert.addTextField { (textField) in
             textField.text = ""
         }
+        // Add OK button, adds a watchlist company to the database if textfield is not empty
         myalert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak myalert] (_) in
             let textField = myalert?.textFields![0]
             if (textField!.text!.count > 0) {
@@ -181,13 +190,11 @@ class WatchlistTableViewController: UITableViewController {
                     }
                 }
             }
-            
-
-            
         }))
+        // Add cancel button
         let cancel = UIAlertAction(title: "Cancel", style: .default) { (alertAction) in }
         myalert.addAction(cancel)
-        
+        // Show the alert for the user to interact with
         self.present(myalert, animated:true, completion:nil)
         
     }
@@ -235,11 +242,11 @@ class WatchlistTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "watchDetails" {
+            // Pass the ticker name to the details view controller
             let cell = sender as! WatchlistViewCell
             let ticker = cell.tickerName.text
             
             let DetailsViewController = segue.destination as! DetailsViewController
-            
             DetailsViewController.ticker = ticker!
         }
         // Get the new view controller using segue.destination.
