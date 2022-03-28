@@ -11,7 +11,7 @@ Original App Design Project - README Template
 
 ## Overview 
 ### Description
-The SARK Finance app allows users to consolidate their investments into one portfolio for simplified performance monitoring.
+The SARK Finance Asset Tracker app allows users to consolidate their investments into one portfolio for simplified performance monitoring.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
@@ -40,7 +40,7 @@ The SARK Finance app allows users to consolidate their investments into one port
 
 **Optional Nice-to-have Stories**
 
-- [ ] Users can chat with other users about their investments
+- [ ] Users can chat with other users about their investments (in progress)
 - [ ] Users can see daily/weekly/monthly trends about their portfolio
 - [ ] Show suggested tickers when user is typing in a ticker to add (autocomplete)
 
@@ -90,12 +90,12 @@ The SARK Finance app allows users to consolidate their investments into one port
    * Home
 * Main investment screen
    * Company info (tap on the individual investment to see more information)
-   * Watchlist screen (swipe from right or possibly tab bar at bottom)
+   * Watchlist screen (tab bar at bottom)
 * Company info screen
     * Back button to main investment screen or watchlist screen
 * Watchlist screen
     * Company info (tap on the individual investment to see more information)
-    * Main investment screen (swipe from left or possibly tab bar at bottom
+    * Main investment screen (tab bar at bottom)
 
 ## Wireframes
 
