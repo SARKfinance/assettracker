@@ -14,7 +14,6 @@ Original App Design Project - README Template
 The SARK Finance Asset Tracker app allows users to consolidate their investments into one portfolio for simplified performance monitoring.
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
 - **Category:** Finance
 - **Mobile:** iOS
 - **Story:** Allows users to keep track of their stock investments across different brokerages/exchanges
