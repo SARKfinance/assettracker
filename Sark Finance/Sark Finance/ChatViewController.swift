@@ -17,9 +17,9 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var messageField: UITextField!
     
     @IBAction func sendMessage(_ sender: Any) {
-        let message = PFObject(className: "Message")
+        let message = PFObject(className: "Messages")
         message["text"] = messageField.text
-        message["owner"] = PFUser.current()!
+        message["author"] = PFUser.current()!
         
         message.saveInBackground { (success, error) in
             if success {
@@ -52,15 +52,15 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.dataSource = self
         tableView.delegate = self
         // Load new messages every 5 seconds
-        let timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(loadMessages), userInfo: nil, repeats: true)
+        let timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(loadMessages), userInfo: nil, repeats: true)
         self.loadMessages()
         // Do any additional setup after loading the view.
     }
     
     @objc
     func loadMessages() {
-        let query = PFQuery(className:"Message")
-        query.includeKeys(["owner"])
+        let query = PFQuery(className:"Messages")
+        query.includeKeys(["author"])
         query.order(byDescending: "createdAt")
         
         query.findObjectsInBackground { (messages, error) in
@@ -81,7 +81,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageTableViewCell", for: indexPath) as! ChatMessageTableViewCell
         let message = messages[indexPath.row]
         
-        let user = message["owner"] as! PFUser
+        let user = message["author"] as! PFUser
         
         if user.username == PFUser.current()?.username {
             cell.userName.textColor = UIColor.systemBlue

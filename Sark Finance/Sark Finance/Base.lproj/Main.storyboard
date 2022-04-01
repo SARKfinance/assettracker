@@ -193,7 +193,7 @@
                                 <rect key="frame" x="57" y="529" width="302" height="34"/>
                                 <color key="backgroundColor" red="0.87769242270000003" green="0.94809399930000005" blue="1" alpha="0.48984906459999999" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Wu-dM-sPD">
                                 <rect key="frame" x="57" y="622" width="103" height="37"/>
@@ -433,7 +433,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatMessageTableViewCell" rowHeight="99" id="OvO-Ad-kB6" customClass="ChatMessageTableViewCell" customModule="Sark_Finance" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChatMessageTableViewCell" rowHeight="99" id="OvO-Ad-kB6" customClass="ChatMessageTableViewCell" customModule="Sark_Finance" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="99"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OvO-Ad-kB6" id="rgH-Q7-BWO">
@@ -1066,7 +1066,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Q9l-AF-BUV"/>
+        <segue reference="C0z-3p-exx"/>
         <segue reference="c6T-G3-jbg"/>
     </inferredMetricsTieBreakers>
     <resources>
