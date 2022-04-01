@@ -33,6 +33,8 @@
 		EC6CB44F27E89B01002503A8 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB44E27E89B01002503A8 /* EditViewController.swift */; };
 		EC6CB45327ED46AC002503A8 /* WatchlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB45227ED46AC002503A8 /* WatchlistTableViewController.swift */; };
 		EC6CB45527ED4ADE002503A8 /* WatchlistViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB45427ED4ADE002503A8 /* WatchlistViewCell.swift */; };
+		EC6CB45B27F75551002503A8 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB45A27F75551002503A8 /* ChatViewController.swift */; };
+		EC6CB46127F76DF0002503A8 /* ChatMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CB46027F76DF0002503A8 /* ChatMessageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		EC6CB44E27E89B01002503A8 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		EC6CB45227ED46AC002503A8 /* WatchlistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistTableViewController.swift; sourceTree = "<group>"; };
 		EC6CB45427ED4ADE002503A8 /* WatchlistViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewCell.swift; sourceTree = "<group>"; };
+		EC6CB45A27F75551002503A8 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		EC6CB46027F76DF0002503A8 /* ChatMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,8 @@
 				EC6CB44E27E89B01002503A8 /* EditViewController.swift */,
 				EC6CB45227ED46AC002503A8 /* WatchlistTableViewController.swift */,
 				EC6CB45427ED4ADE002503A8 /* WatchlistViewCell.swift */,
+				EC6CB45A27F75551002503A8 /* ChatViewController.swift */,
+				EC6CB46027F76DF0002503A8 /* ChatMessageTableViewCell.swift */,
 			);
 			path = "Sark Finance";
 			sourceTree = "<group>";
@@ -468,6 +474,8 @@
 				EC6CB44427E63BA9002503A8 /* PortfolioViewCell.swift in Sources */,
 				5EB85C7627E397C300A78AB3 /* SignUpViewController.swift in Sources */,
 				931B93E327EAE519008ED83A /* chatTableViewController.swift in Sources */,
+				EC6CB45B27F75551002503A8 /* ChatViewController.swift in Sources */,
+				EC6CB46127F76DF0002503A8 /* ChatMessageTableViewCell.swift in Sources */,
 				EC6CB44227E58B0E002503A8 /* DetailsViewController.swift in Sources */,
 				93E138F827E44237007609C3 /* LoginViewController.swift in Sources */,
 				EC6CB45527ED4ADE002503A8 /* WatchlistViewCell.swift in Sources */,
