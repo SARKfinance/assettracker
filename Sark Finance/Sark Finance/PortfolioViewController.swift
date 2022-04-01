@@ -119,7 +119,7 @@ class PortfolioViewController: UITableViewController  {
         
         // Set the investment for this cell and save it as a property
         let investment = self.investments[indexPath.row]
-        
+        cell.investment = investment
         // Set up for API call to get stock data (primarily for the company name and the icon)
         let url = URL(string:"https://api.polygon.io/v3/reference/tickers/" + (investment["ticker"] as! String) + "?apiKey=" + self.pgonk1 + self.pgonk2)!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
