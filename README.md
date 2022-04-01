@@ -39,7 +39,7 @@ The SARK Finance Asset Tracker app allows users to consolidate their investments
 
 **Optional Nice-to-have Stories**
 
-- [ ] Users can chat with other users about their investments (in progress)
+- [X] Users can chat with other users about their investments (in progress)
 - [ ] Users can see daily/weekly/monthly trends about their portfolio
 - [ ] Show suggested tickers when user is typing in a ticker to add (autocomplete)
 
@@ -54,6 +54,10 @@ The SARK Finance Asset Tracker app allows users to consolidate their investments
 **Watchlist Add/Delete and view details about a company with tap**
 
 <img src="https://github.com/SARKfinance/assettracker/blob/main/Sark%20Finance%20-%20Watchlist%20Demo.gif" height=350>
+
+**Chat - Send messages to other users about your favorite stocks**
+
+<img src="https://github.com/SARKfinance/assettracker/blob/main/Sark%20Finance%20-%20Chat%20Demo.gif" height=350>
 
 ### 2. Screen Archetypes
 
@@ -79,6 +83,7 @@ The SARK Finance Asset Tracker app allows users to consolidate their investments
 * Main investment/home screen
 * Company info screen
 * Watchlist screen
+* Chat Screen
 
 **Flow Navigation** (Screen to Screen)
 
@@ -95,6 +100,8 @@ The SARK Finance Asset Tracker app allows users to consolidate their investments
 * Watchlist screen
     * Company info (tap on the individual investment to see more information)
     * Main investment screen (tab bar at bottom)
+* Chat Screen
+    * Navigate to with tab bar
 
 ## Wireframes
 
