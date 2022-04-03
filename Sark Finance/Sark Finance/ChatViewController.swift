@@ -16,6 +16,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var messageField: UITextField!
     
+    // Function for saving a new message to the database
     @IBAction func sendMessage(_ sender: Any) {
         let message = PFObject(className: "Messages")
         message["text"] = messageField.text
@@ -33,7 +34,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    
+    // Function for signing user out and returning to login screen
     @IBAction func signOut(_ sender: Any) {
         PFUser.logOut()
         // Show the initial log in screen after user logs out
@@ -45,18 +46,17 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        // Load new messages every 5 seconds
+        // Set timer to load new messages every 0.5 seconds
         let timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(loadMessages), userInfo: nil, repeats: true)
+        // Load new messages on initial load
         self.loadMessages()
-        // Do any additional setup after loading the view.
     }
     
+    // Function for loading messages from database
     @objc
     func loadMessages() {
         let query = PFQuery(className:"Messages")
@@ -72,17 +72,18 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return messages.count
     }
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Initialize reusable cells
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageTableViewCell", for: indexPath) as! ChatMessageTableViewCell
+        // Find corresponding message object
         let message = messages[indexPath.row]
         
+        // Get the author of the message and check if the current user posted it.
         let user = message["author"] as! PFUser
-        
         if user.username == PFUser.current()?.username {
             cell.userName.textColor = UIColor.systemBlue
         }
@@ -90,7 +91,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
             cell.userName.textColor = UIColor.black
         }
         
-        
+        // Set values for labels
         cell.userName.text = user.username
         cell.chatMessage.text = message["text"] as? String
 
