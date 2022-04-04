@@ -150,7 +150,7 @@ class WatchlistTableViewController: UITableViewController {
         }
         // Execute API call task and set ticker name for cell
         task.resume()
-        cell.tickerName.text = ticker
+        cell.tickerName.text = ticker.uppercased()
 
         return cell
     }
@@ -176,7 +176,7 @@ class WatchlistTableViewController: UITableViewController {
             let textField = myalert?.textFields![0]
             if (textField!.text!.count > 0) {
                 let watchlist = PFObject(className:"Watchlist")
-                watchlist["ticker"] = textField?.text
+                watchlist["ticker"] = textField?.text?.uppercased()
                 watchlist["owner"] = PFUser.current()!
                 
                 watchlist.saveInBackground { (success, error) in

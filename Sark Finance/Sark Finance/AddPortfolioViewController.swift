@@ -34,7 +34,7 @@ class AddPortfolioViewController: UIViewController, UITextFieldDelegate {
     // Function called when submit button is pressed. Saves new investment object
     @IBAction func onSubmit(_ sender: Any) {
         let investment = PFObject(className:"Investments")
-        investment["ticker"] = self.tickerName.text
+        investment["ticker"] = self.tickerName.text?.uppercased()
         investment["numShares"] = self.numShares.text
         investment["brokerage"] = self.brokerageName.text
         investment["owner"] = PFUser.current()!

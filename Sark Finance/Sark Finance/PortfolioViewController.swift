@@ -153,7 +153,7 @@ class PortfolioViewController: UITableViewController  {
                           // Get array of movies
                           let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                          
-                          // Store movies in property
+                          // Store results in property
                           liveResults = dataDictionary["results"] as! [String:Any]
                           
                           // Get share price value and calculate total value
