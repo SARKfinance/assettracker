@@ -40,7 +40,7 @@ The SARK Finance Asset Tracker app allows users to consolidate their investments
 
 **Optional Nice-to-have Stories**
 
-- [X] Users can chat with other users about their investments (in progress)
+- [X] Users can chat with other users about their investments (COMPLETED)
 - [ ] Users can see daily/weekly/monthly trends about their portfolio
 - [ ] Show suggested tickers when user is typing in a ticker to add (autocomplete)
 
