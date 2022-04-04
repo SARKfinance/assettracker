@@ -7,7 +7,7 @@ Original App Design Project - README Template
 1. [Overview](#Overview)
 2. [Product Spec](#Product-Spec)
 3. [Wireframes](#Wireframes)
-4. [Schema/Models](#Schema/Models)
+4. [Models](#Models)
 5. [Networking](#Networking)
 
 ## Overview 
@@ -118,7 +118,7 @@ Figma Bonus High Fidelity Digital Wireframes and Interactive Prototype:
 </p>
 
 
-### Schema/Models
+### Models
    Investment
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
