@@ -45,19 +45,19 @@ The SARK Finance Asset Tracker app allows users to consolidate their investments
 
 **User Sign up & Login Demo GIF**
 
-<img src="https://github.com/SARKfinance/assettracker/blob/main/Sark%20Finance%20-%20Sign%20up%20%26%20Login%20Demo.gif" height=350>
+<img src="https://github.com/SARKfinance/assettracker/blob/main/Images/Sark%20Finance%20-%20Sign%20up%20%26%20Login%20Demo.gif" height=350>
 
 **Portfolio Create/Read/Update/Delete and view details about a company with tap**
 
-<img src="https://github.com/SARKfinance/assettracker/blob/main/Sark%20Finance%20-%20Portfolio%20CRUD%20operations%20Demo.gif" height=350>
+<img src="https://github.com/SARKfinance/assettracker/blob/main/Images/Sark%20Finance%20-%20Portfolio%20CRUD%20operations%20Demo.gif" height=350>
 
 **Watchlist Add/Delete and view details about a company with tap**
 
-<img src="https://github.com/SARKfinance/assettracker/blob/main/Sark%20Finance%20-%20Watchlist%20Demo.gif" height=350>
+<img src="https://github.com/SARKfinance/assettracker/blob/main/Images/Sark%20Finance%20-%20Watchlist%20Demo.gif" height=350>
 
 **Chat - Send messages to other users about your favorite stocks**
 
-<img src="https://github.com/SARKfinance/assettracker/blob/main/Sark%20Finance%20-%20Chat%20Demo.gif" height=350>
+<img src="https://github.com/SARKfinance/assettracker/blob/main/Images/Sark%20Finance%20-%20Chat%20Demo.gif" height=350>
 
 ### 2. Screen Archetypes
 
@@ -110,10 +110,10 @@ Figma Bonus High Fidelity Digital Wireframes and Interactive Prototype:
 <a href="https://www.figma.com/proto/ETcngAde8rsRreObIqdSQV/Wireframing-Prototype?node-id=3%3A13&scaling=scale-down&page-id=0%3A1&starting-point-node-id=3%3A13">Click here to see Figma Interactive Prototype's flow</a>
 
 <p float="left">
-  <img src="https://github.com/SARKfinance/assettracker/blob/main/Login%20Screen.png" height=350>
-  <img src="https://github.com/SARKfinance/assettracker/blob/main/Sign%20up%20screen.png" height=350>
-  <img src="https://github.com/SARKfinance/assettracker/blob/main/Main%20Screen%20and%20Watchlist.png" height=350>
-  <img src="https://github.com/SARKfinance/assettracker/blob/main/Company%20Details%20Screen.png" height=350>
+  <img src="https://github.com/SARKfinance/assettracker/blob/main/Images/Login%20Screen.png" height=350>
+  <img src="https://github.com/SARKfinance/assettracker/blob/main/Images/Sign%20up%20screen.png" height=350>
+  <img src="https://github.com/SARKfinance/assettracker/blob/main/Images/Main%20Screen%20and%20Watchlist.png" height=350>
+  <img src="https://github.com/SARKfinance/assettracker/blob/main/Images/Company%20Details%20Screen.png" height=350>
 </p>
 
 
