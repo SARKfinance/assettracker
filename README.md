@@ -5,9 +5,10 @@ Original App Design Project - README Template
 
 ## Table of Contents
 1. [Overview](#Overview)
-1. [Product Spec](#Product-Spec)
-1. [Wireframes](#Wireframes)
-2. [Schema](#Schema)
+2. [Product Spec](#Product-Spec)
+3. [Wireframes](#Wireframes)
+4. [Schema/Models](#Schema/Models)
+5. [Networking](#Networking)
 
 ## Overview 
 ### Description
@@ -117,18 +118,30 @@ Figma Bonus High Fidelity Digital Wireframes and Interactive Prototype:
 </p>
 
 
-## Schema 
-[This section will be completed in Unit 9]
-### Models
+### Schema/Models
    Investment
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
    | objectId      | String   | unique id for the investment(default field) |
-   | author        | Pointer to User| the owner of the investment |
-   | name       | String   | the ticker for that stock |
-   | price | Number   | the price at which the user bought the investment |
-   | boughtAt     | DateTime | the date the user bought the investment |
+   | owner        | Pointer to User| the owner of the investment |
+   | ticker       | String   | the ticker for that stock |
+   | numShares     | Number | the date the user bought the investment |
    | brokerage     | String | the brokerage the user's investment is held at |
+   
+   Watchlist
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the watchlist entry (default field) |
+   | owner        | Pointer to User| the owner of the watchlist entry |
+   | ticker       | String   | the ticker for that stock |
+   
+   Messages
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the message(default field) |
+   | author        | Pointer to User| the creator of the message |
+   | text       | String   | the content of the message |
+
    
 ### Networking
 * Login
