@@ -37,8 +37,8 @@ class PortfolioViewController: UITableViewController  {
     var investments = [PFObject]()
     
     // Slightly obfuscated API key
-    let pgonk1 = "iOuM5gLKJ37tjo"
-    let pgonk2 = "CXjIW6elzWLRdbCsZw"
+    let pgonk1 = "polygonKeyPart1"
+    let pgonk2 = "polygonKeyPart2"
     // Variable to keep track of total portfolio valuex
     var total: Double = 0
     
