@@ -31,8 +31,8 @@ class DetailsViewController: UIViewController {
     // Property to hold the name of the ticker to show details for
     var ticker: String = ""
     
-    let pgonk1 = "iOuM5gLKJ37tjo"
-    let pgonk2 = "CXjIW6elzWLRdbCsZw"
+    let pgonk1 = "polygonKeyPart1"
+    let pgonk2 = "polygonKeyPart2"
     
     // Called when user wants to exit detail screen
     @IBAction func dismissButton(_ sender: Any) {
