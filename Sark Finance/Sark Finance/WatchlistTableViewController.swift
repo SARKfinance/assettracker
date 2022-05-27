@@ -26,8 +26,8 @@ struct LastTrade: Decodable {
 class WatchlistTableViewController: UITableViewController {
     
     
-    let pgonk1 = "iOuM5gLKJ37tjo"
-    let pgonk2 = "CXjIW6elzWLRdbCsZw"
+    let pgonk1 = "polygonKeyPart1"
+    let pgonk2 = "polygonKeyPart2"
     
     var watchlist = [PFObject]()
     
