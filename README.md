@@ -1,4 +1,4 @@
-Original App Design Project - README Template
+App Design Project
 ===
 
 # Asset Tracker
